@@ -15,7 +15,7 @@ const notify = require("gulp-notify");
 const postcss = require("gulp-postcss");
 const rename = require("gulp-rename");
 const run = require("gulp-run");
-const sass = require("gulp-sass");
+const sass = require("gulp-sass")(require("sass"));
 const sourcemaps = require("gulp-sourcemaps");
 const terser = require("gulp-terser");
 
