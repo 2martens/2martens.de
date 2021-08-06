@@ -38,7 +38,7 @@
     "micromatch": "^4.0.4",
     "mixin-deep": "^2.0.1",
     "node-sass": "^6.0.1",
-    "sass": "^1.35.2",
+    "sass": "^1.37.5",
     "regenerator-runtime": "^0.13.9",
     "set-value": "^4.0.0"
   },
