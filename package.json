@@ -40,7 +40,7 @@
     "node-sass": "^6.0.1",
     "sass": "^1.39.2",
     "regenerator-runtime": "^0.13.9",
-    "set-value": "^4.0.0"
+    "set-value": "^4.1.0"
   },
   "resolutions": {
     "minimist": "^1.2.3",
