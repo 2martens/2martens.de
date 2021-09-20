@@ -32,7 +32,7 @@
     "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-terser": "^2.0.1",
-    "localtunnel": "^2.0.1",
+    "localtunnel": "^2.0.2",
     "lodash": "^4.17.21",
     "lodash.template": "^4.5.0",
     "micromatch": "^4.0.4",
