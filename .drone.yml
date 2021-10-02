@@ -2,6 +2,9 @@ kind: pipeline
 name: default
 type: docker
 
+clone:
+  skip_verify: true
+
 steps:
   - name: restore-cache
     privileged: true
