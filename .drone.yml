@@ -5,7 +5,7 @@ type: docker
 steps:
   - name: restore-cache
     privileged: true
-    image: drillster/drone-volume-cache
+    image: 2martens/drone-volume-cache
     settings:
       restore: true
       mount:
@@ -30,7 +30,7 @@ steps:
       - gulp build
   - name: rebuild-cache
     privileged: true
-    image: drillster/drone-volume-cache
+    image: 2martens/drone-volume-cache
     settings:
       rebuild: true
       mount:
