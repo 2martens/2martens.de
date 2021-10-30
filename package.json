@@ -4,7 +4,7 @@
   "description": "My website",
   "main": "index.js",
   "dependencies": {
-    "bootstrap": "^4.6.0",
+    "bootstrap": "^4.6.1",
     "jquery": "^3.6.0",
     "js-yaml": "4.1.0",
     "popper.js": "^1.16.1"
