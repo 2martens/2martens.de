@@ -28,7 +28,7 @@ steps:
       - ruby -e 'puts STDIN.external_encoding' # figure out the encoding used
       - bundle update --bundler
       - bundle install
-      - yarn config set cache-folder /cache/.yarn-cache
+      - yarn config set cache-folder .yarn-cache
       - yarn global add gulp-cli
       - yarn install --frozen-lockfile
       - gulp build
