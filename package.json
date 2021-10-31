@@ -38,8 +38,8 @@
     "micromatch": "^4.0.4",
     "mixin-deep": "^2.0.1",
     "node-sass": "^6.0.1",
-    "sass": "^1.43.4",
     "regenerator-runtime": "^0.13.9",
+    "sass": "^1.43.4",
     "set-value": "^4.1.0"
   },
   "resolutions": {
