@@ -39,7 +39,7 @@
     "mixin-deep": "^2.0.1",
     "node-sass": "^7.0.1",
     "regenerator-runtime": "^0.13.9",
-    "sass": "^1.45.2",
+    "sass": "^1.46.0",
     "set-value": "^4.1.0"
   },
   "resolutions": {
