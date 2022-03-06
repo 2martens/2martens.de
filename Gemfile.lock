@@ -253,12 +253,11 @@ DEPENDENCIES
   jekyll-toc
   jemoji
   kramdown
-  libv8-node
   liquid
   listen
   loofah (>= 2.3.1)
   mercenary
-  mini_racer (< 0.7.0)
+  mini_racer (~> 0.6.2)
   minima
   nokogiri (>= 1.10.4)
   rack (~> 2.2.3)
@@ -269,4 +268,4 @@ DEPENDENCIES
   terminal-table
 
 BUNDLED WITH
-   1.17.3
+   2.3.8

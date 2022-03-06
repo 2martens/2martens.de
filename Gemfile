@@ -2,8 +2,6 @@ source 'https://rubygems.org'
 # gem 'github-pages', group: :jekyll_plugins
 gem 'activesupport'
 gem "actionview", ">= 5.2.4.2"
-gem 'libv8-node'
-gem 'mini_racer', "< 0.7.0"
 # gem 'github-pages-health-check'
 gem 'html-proofer', group: :development
 gem 'jekyll', '~> 4.2'
@@ -44,3 +42,5 @@ gem 'nokogiri', '>= 1.10.4'
 gem 'loofah', '>= 2.3.1'
 # gem 'ruby-oembed'
 gem 'terminal-table'
+
+gem "mini_racer", "~> 0.6.2"
