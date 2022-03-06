@@ -137,6 +137,7 @@ GEM
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
     libv8-node (16.10.0.0)
+    libv8-node (16.10.0.0-x86_64-linux)
     liquid (4.0.3)
     listen (3.7.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -157,6 +158,8 @@ GEM
     multipart-post (2.1.1)
     nokogiri (1.13.3)
       mini_portile2 (~> 2.8.0)
+      racc (~> 1.4)
+    nokogiri (1.13.3-x86_64-linux)
       racc (~> 1.4)
     octokit (4.18.0)
       faraday (>= 0.9)
@@ -224,6 +227,7 @@ GEM
 
 PLATFORMS
   ruby
+  x86_64-linux
 
 DEPENDENCIES
   actionview (>= 5.2.4.2)
@@ -249,6 +253,7 @@ DEPENDENCIES
   jekyll-toc
   jemoji
   kramdown
+  libv8-node
   liquid
   listen
   loofah (>= 2.3.1)
