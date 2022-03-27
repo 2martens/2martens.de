@@ -10,7 +10,7 @@
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.5",
+    "@babel/core": "^7.17.8",
     "@babel/preset-env": "^7.16.11",
     "autoprefixer": "^9.8.8",
     "braces": "^3.0.2",
