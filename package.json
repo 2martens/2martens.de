@@ -17,7 +17,7 @@
     "browser-sync": "^2.27.9",
     "child_process": "^1.0.2",
     "core-js": "^3.22.5",
-    "del": "^6.0.0",
+    "del": "^6.1.0",
     "fancy-log": "^2.0.0",
     "fstream": "^1.0.12",
     "gulp": "^4.0.2",
