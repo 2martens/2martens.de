@@ -192,7 +192,7 @@ GEM
       forwardable-extended (~> 2.6)
     public_suffix (4.0.7)
     racc (1.6.0)
-    rack (2.2.3.1)
+    rack (2.2.4)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails-dom-testing (2.0.3)
@@ -282,7 +282,7 @@ DEPENDENCIES
   mini_racer (~> 0.6.2)
   minima
   nokogiri (>= 1.10.4)
-  rack (~> 2.2.3)
+  rack (~> 2.2.4)
   railties (>= 5.2.2.1)
   rouge
   rubocop
