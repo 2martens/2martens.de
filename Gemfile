@@ -43,4 +43,4 @@ gem 'loofah', '>= 2.3.1'
 # gem 'ruby-oembed'
 gem 'terminal-table'
 
-gem "mini_racer", "~> 0.6.2"
+gem "mini_racer", "~> 0.6.3"

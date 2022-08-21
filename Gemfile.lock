@@ -170,7 +170,7 @@ GEM
     mercenary (0.4.0)
     method_source (1.0.0)
     mini_portile2 (2.8.0)
-    mini_racer (0.6.2)
+    mini_racer (0.6.3)
       libv8-node (~> 16.10.0.0)
     minima (2.5.1)
       jekyll (>= 3.5, < 5.0)
@@ -281,7 +281,7 @@ DEPENDENCIES
   listen
   loofah (>= 2.3.1)
   mercenary
-  mini_racer (~> 0.6.2)
+  mini_racer (~> 0.6.3)
   minima
   nokogiri (>= 1.10.4)
   rack (~> 2.2.4)
