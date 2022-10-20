@@ -4,7 +4,7 @@ gem 'activesupport'
 gem "actionview", ">= 5.2.4.2"
 # gem 'github-pages-health-check'
 gem 'html-proofer', group: :development
-gem 'jekyll', '~> 4.2'
+gem 'jekyll', '~> 4.3'
 group :jekyll_plugins do
   gem 'jekyll-avatar'
   gem 'jekyll-coffeescript'
