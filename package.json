@@ -10,8 +10,8 @@
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.19.6",
-    "@babel/preset-env": "^7.19.4",
+    "@babel/core": "^7.20.2",
+    "@babel/preset-env": "^7.20.2",
     "autoprefixer": "^9.8.8",
     "braces": "^3.0.2",
     "browser-sync": "^2.27.10",
@@ -39,7 +39,7 @@
     "mixin-deep": "^2.0.1",
     "node-sass": "^7.0.3",
     "regenerator-runtime": "^0.13.10",
-    "sass": "^1.55.0",
+    "sass": "^1.56.0",
     "set-value": "^4.1.0"
   },
   "resolutions": {
