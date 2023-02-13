@@ -216,7 +216,7 @@ GEM
       ffi (~> 1.0)
     regexp_parser (2.7.0)
     rexml (3.2.5)
-    rouge (4.0.1)
+    rouge (4.1.0)
     rubocop (1.45.1)
       json (~> 2.3)
       parallel (~> 1.10)
