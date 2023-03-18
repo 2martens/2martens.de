@@ -5,18 +5,18 @@
   "main": "index.js",
   "dependencies": {
     "bootstrap": "^4.6.2",
-    "jquery": "^3.6.3",
+    "jquery": "^3.6.4",
     "js-yaml": "4.1.0",
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.12",
+    "@babel/core": "^7.21.3",
     "@babel/preset-env": "^7.20.2",
     "autoprefixer": "^9.8.8",
     "braces": "^3.0.2",
-    "browser-sync": "^2.27.11",
+    "browser-sync": "^2.29.0",
     "child_process": "^1.0.2",
-    "core-js": "^3.28.0",
+    "core-js": "^3.29.1",
     "del": "^6.1.1",
     "fancy-log": "^2.0.0",
     "fstream": "^1.0.12",
@@ -39,7 +39,7 @@
     "mixin-deep": "^2.0.1",
     "node-sass": "^7.0.3",
     "regenerator-runtime": "^0.13.11",
-    "sass": "^1.58.0",
+    "sass": "^1.59.3",
     "set-value": "^4.1.0"
   },
   "resolutions": {
