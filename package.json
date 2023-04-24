@@ -10,13 +10,13 @@
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.21.3",
-    "@babel/preset-env": "^7.20.2",
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
     "autoprefixer": "^9.8.8",
     "braces": "^3.0.2",
-    "browser-sync": "^2.29.0",
+    "browser-sync": "^2.29.1",
     "child_process": "^1.0.2",
-    "core-js": "^3.29.1",
+    "core-js": "^3.30.1",
     "del": "^6.1.1",
     "fancy-log": "^2.0.0",
     "fstream": "^1.0.12",
@@ -39,7 +39,7 @@
     "mixin-deep": "^2.0.1",
     "node-sass": "^7.0.3",
     "regenerator-runtime": "^0.13.11",
-    "sass": "^1.59.3",
+    "sass": "^1.62.0",
     "set-value": "^4.1.0"
   },
   "resolutions": {
