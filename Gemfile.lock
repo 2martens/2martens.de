@@ -140,8 +140,8 @@ GEM
       rexml
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
-    libv8-node (16.10.0.0)
-    libv8-node (16.10.0.0-x86_64-linux)
+    libv8-node (16.19.0.1)
+    libv8-node (16.19.0.1-x86_64-linux)
     liquid (4.0.4)
     listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -152,8 +152,8 @@ GEM
     mercenary (0.4.0)
     method_source (1.0.0)
     mini_portile2 (2.8.2)
-    mini_racer (0.6.3)
-      libv8-node (~> 16.10.0.0)
+    mini_racer (0.6.4)
+      libv8-node (~> 16.19.0.0)
     minima (2.5.1)
       jekyll (>= 3.5, < 5.0)
       jekyll-feed (~> 0.9)
@@ -267,7 +267,7 @@ DEPENDENCIES
   listen
   loofah (>= 2.3.1)
   mercenary
-  mini_racer (~> 0.6.3)
+  mini_racer (~> 0.6.4)
   minima
   nokogiri (>= 1.10.4)
   rack (~> 2.2.7)
