@@ -10,8 +10,8 @@
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.21.8",
-    "@babel/preset-env": "^7.21.5",
+    "@babel/core": "^7.22.1",
+    "@babel/preset-env": "^7.22.4",
     "autoprefixer": "^9.8.8",
     "braces": "^3.0.2",
     "browser-sync": "^2.29.3",
