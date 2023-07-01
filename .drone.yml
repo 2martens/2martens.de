@@ -19,7 +19,7 @@ steps:
       - name: cache
         path: /cache
   - name: build
-    image: 2martens/ruby-node
+    image: 2martens/ruby-node:3-18
     environment:
       BUNDLE_PATH: .bundle
     commands:
