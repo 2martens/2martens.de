@@ -20,9 +20,9 @@ import terser from "gulp-terser";
 
 // Include paths file.
 import {paths} from "./_assets/gulp_config/paths.js";
-import {render} from "node-sass";
+import * as dartSass from "sass";
 
-const gulpSass = sass(render);
+const gulpSass = sass(dartSass);
 
 const browserSync = create("gulpfile");
 // Uses Sass compiler to process styles, adds vendor prefixes, minifies, then
