@@ -2,7 +2,7 @@
 
 // paths.js file
 
-let paths = {};
+const paths = {};
 
 // Directory locations.
 paths.assetsDir       = "_assets/";      // The files Gulp will handle.
@@ -70,4 +70,4 @@ paths.sprocketsDirs = {
     images: []
 };
 
-module.exports = paths;
+export {paths};
