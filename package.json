@@ -52,7 +52,10 @@
     "bl": "^2.2.1",
     "socket.io-parser": "^4.2.3",
     "fast-xml-parser": "^4.2.5",
-    "http-cache-semantics": "^4.1.1"
+    "http-cache-semantics": "^4.1.1",
+    "semver-regex": "^3.1.4",
+    "glob-parent": "^5.1.2",
+    "trim-newlines": "^3.0.1"
   },
   "engines": {
     "node": ">= 18.0.0"
