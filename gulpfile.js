@@ -7,7 +7,7 @@ import {create} from "browser-sync";
 import cleancss from "gulp-clean-css";
 import concat from "gulp-concat";
 import {deleteAsync} from 'del';
-import {exec} from "child_process";
+import {execSync} from "child_process";
 import gulp from "gulp";
 import log from "fancy-log";
 import imagemin from "gulp-imagemin";
@@ -129,24 +129,24 @@ gulp.task("clean:images", function () {
 // Runs jekyll build command.
 gulp.task("build:jekyll", function () {
     const shellCommand = "JEKYLL_ENV=production bundle exec jekyll build --config _config.yml";
-    return exec(shellCommand);
+    return execSync(shellCommand);
 });
 
 // Runs jekyll build command using test config.
 gulp.task("build:jekyll:test", function () {
     const shellCommand = "bundle exec jekyll build --config _config.yml,_config.test.yml";
-    return exec(shellCommand);
+    return execSync(shellCommand);
 });
 
 // Runs jekyll build command using local config.
 gulp.task("build:jekyll:local", function () {
     const shellCommand = "bundle exec jekyll build --config _config.yml,_config.test.yml,_config.dev.yml";
-    return exec(shellCommand);
+    return execSync(shellCommand);
 });
 
 gulp.task("htmlproofer", function () {
     const shellCommand = "bundle exec htmlproofer _site/ --disable-external";
-    return exec(shellCommand);
+    return execSync(shellCommand);
 });
 
 // Deletes the entire _site directory.
