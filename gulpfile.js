@@ -19,7 +19,7 @@ import sourcemaps from "gulp-sourcemaps";
 import terser from "gulp-terser";
 
 // Include paths file.
-import paths from "./_assets/gulp_config/paths";
+import * as paths from "./_assets/gulp_config/paths";
 import {render} from "node-sass";
 
 const browserSync = create("gulpfile");
