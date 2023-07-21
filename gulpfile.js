@@ -144,9 +144,10 @@ gulp.task("build:jekyll:local", function () {
     return exec(shellCommand);
 });
 
-gulp.task("htmlproofer", function () {
+gulp.task("htmlproofer", function(done) {
     const shellCommand = "bundle exec htmlproofer _site/ --disable-external";
-    return exec(shellCommand);
+    execSync(shellCommand);
+    done();
 });
 
 // Deletes the entire _site directory.
