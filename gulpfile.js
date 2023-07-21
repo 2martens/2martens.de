@@ -19,20 +19,21 @@ import sourcemaps from "gulp-sourcemaps";
 import terser from "gulp-terser";
 
 // Include paths file.
-import {paths} from "_assets/gulp_config/paths";
+import {paths} from "./_assets/gulp_config/paths";
 import {render} from "node-sass";
 
-const browserSync = create("gulpfile");
+const gulpSass = sass(render);
 
+const browserSync = create("gulpfile");
 // Uses Sass compiler to process styles, adds vendor prefixes, minifies, then
 // outputs file to the appropriate location.
 gulp.task("build:styles:main", function () {
     return gulp.src(paths.sassFiles + "/main.scss")
         .pipe(sourcemaps.init())
-        .pipe(sass(render)({
+        .pipe(gulpSass({
             outputStyle: "compressed",
             includePaths: [paths.includeSass, paths.sassFiles]
-        }).on("error", sass.logError))
+        }, true).on("error", gulpSass.logError))
         .pipe(postcss([autoprefixer()]))
         .pipe(cleancss())
         .pipe(sourcemaps.write())
@@ -46,10 +47,10 @@ gulp.task("build:styles:main", function () {
 gulp.task("build:styles:critical", function () {
     return gulp.src(paths.sassFiles + "/critical.scss")
         .pipe(sourcemaps.init())
-        .pipe(sass({
+        .pipe(gulpSass({
             outputStyle: "compressed",
             includePaths: [paths.includeSass, paths.sassFiles]
-        }).on("error", sass.logError))
+        }, true).on("error", gulpSass.logError))
         .pipe(postcss([autoprefixer()]))
         .pipe(cleancss())
         .pipe(sourcemaps.write())
@@ -143,7 +144,7 @@ gulp.task("build:jekyll:local", function () {
     return exec(shellCommand);
 });
 
-gulp.task("htmlproofer", function() {
+gulp.task("htmlproofer", function () {
     const shellCommand = "bundle exec htmlproofer _site/ --disable-external";
     return exec(shellCommand);
 });
@@ -219,7 +220,7 @@ gulp.task("serve", gulp.series("build:test", function () {
 
     // Watch drafts if --drafts flag was passed.
     if (module.exports.drafts) {
-    //    gulp.watch("_drafts/*.+(md|markdown|MD)", gulp.series("build:jekyll:watch"));
+        //    gulp.watch("_drafts/*.+(md|markdown|MD)", gulp.series("build:jekyll:watch"));
     }
 
     // Watch html and markdown files.
@@ -238,8 +239,8 @@ gulp.task("serve", gulp.series("build:test", function () {
 // Updates Ruby gems
 gulp.task("update:bundle", function () {
     return gulp.src("")
-        .pipe(run("bundle install"))
-        .pipe(run("bundle update"))
+        .pipe(run("bundle install", {}))
+        .pipe(run("bundle update", {}))
         .pipe(notify({message: "Bundle Update Complete"}))
         .on("error", log);
 });
