@@ -1,6 +1,5 @@
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
     <meta name="description"
@@ -36,15 +35,13 @@
         (function( w ){
             "use strict";
             // rel=preload support test
-            if( !w.loadCSS ){
-                w.loadCSS = function(){};
-            }
+            const loadCSS = function() {};
             // define on the loadCSS obj
-            var rp = loadCSS.relpreload = {};
+            const rp = loadCSS.relpreload = {};
             // rel=preload feature support test
             // runs once and returns a function for compat purposes
             rp.support = (function(){
-                var ret;
+                let ret;
                 try {
                     ret = w.document.createElement( "link" ).relList.supports( "preload" );
                 } catch (e) {
@@ -59,7 +56,7 @@
             // then change that media back to its intended value on load
             rp.bindMediaToggle = function( link ){
                 // remember existing media attr for ultimate state, or default to 'all'
-                var finalMedia = link.media || "all";
+                const finalMedia = link.media || "all";
 
                 function enableStylesheet(){
                     // unbind listeners
@@ -96,9 +93,9 @@
                 if( rp.support() ){
                     return;
                 }
-                var links = w.document.getElementsByTagName( "link" );
-                for( var i = 0; i < links.length; i++ ){
-                    var link = links[ i ];
+                const links = w.document.getElementsByTagName("link");
+                for(let i = 0; i < links.length; i++ ){
+                    const link = links[i];
                     // qualify links to those with rel=preload and as=style attrs
                     if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
                         // prevent rerunning on link
@@ -115,7 +112,7 @@
                 rp.poly();
 
                 // rerun poly on an interval until onload
-                var run = w.setInterval( rp.poly, 500 );
+                const run = w.setInterval(rp.poly, 500);
                 if( w.addEventListener ){
                     w.addEventListener( "load", function(){
                         rp.poly();
@@ -151,8 +148,5 @@
     <script>
         FontAwesomeConfig = { autoAddCss: false }
     </script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-            crossorigin="anonymous"></script>
     <script type="text/javascript" src="/assets/javascripts/main.js" defer></script>
 </head>
