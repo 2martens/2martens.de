@@ -4,29 +4,29 @@
   "description": "My website",
   "main": "index.js",
   "dependencies": {
-    "bootstrap": "^4.6.2",
+    "bootstrap": "^5.3.0",
     "jquery": "^3.7.0",
     "js-yaml": "4.1.0",
-    "popper.js": "^1.16.1"
+    "@popperjs/core": "^2.11.8"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",
     "@babel/preset-env": "^7.22.9",
-    "autoprefixer": "^9.8.8",
+    "autoprefixer": "^10.4.14",
     "braces": "^3.0.2",
     "browser-sync": "^2.29.3",
     "child_process": "^1.0.2",
     "core-js": "^3.31.1",
-    "del": "^6.1.1",
+    "del": "^7.0.0",
     "fancy-log": "^2.0.0",
     "fstream": "^1.0.12",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
-    "gulp-clean-css": "^4.2.0",
+    "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^7.1.0",
+    "gulp-imagemin": "^8.0.0",
     "gulp-notify": "^4.0.0",
-    "gulp-postcss": "^8.0.0",
+    "gulp-postcss": "^9.0.1",
     "gulp-rename": "^2.0.0",
     "gulp-run": "^1.7.1",
     "gulp-sass": "^5.1.0",
@@ -38,8 +38,9 @@
     "micromatch": "^4.0.5",
     "mixin-deep": "^2.0.1",
     "node-sass": "^9.0.0",
+    "postcss": "^8.4.27",
     "regenerator-runtime": "^0.13.11",
-    "sass": "^1.63.6",
+    "sass": "^1.64.0",
     "set-value": "^4.1.0"
   },
   "resolutions": {
@@ -52,7 +53,7 @@
     "socket.io-parser": "^4.2.3"
   },
   "engines": {
-    "node": ">= 10.12.0"
+    "node": ">= 18.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
