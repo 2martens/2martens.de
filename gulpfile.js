@@ -19,8 +19,8 @@ import sourcemaps from "gulp-sourcemaps";
 import terser from "gulp-terser";
 
 // Include paths file.
-const paths = require("./_assets/gulp_config/paths");
-sass.compiler = require("node-sass");
+import paths from "./_assets/gulp_config/paths";
+import {render} from "node-sass";
 
 const browserSync = create("gulpfile");
 
@@ -29,7 +29,7 @@ const browserSync = create("gulpfile");
 gulp.task("build:styles:main", function () {
     return gulp.src(paths.sassFiles + "/main.scss")
         .pipe(sourcemaps.init())
-        .pipe(sass({
+        .pipe(sass(render)({
             outputStyle: "compressed",
             includePaths: [paths.includeSass, paths.sassFiles]
         }).on("error", sass.logError))
