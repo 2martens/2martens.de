@@ -1,27 +1,28 @@
 "use strict";
 
 // Define variables.
-const autoprefixer = require("autoprefixer");
-const babel = require("gulp-babel");
-const browserSync = require("browser-sync").create();
-const cleancss = require("gulp-clean-css");
-const concat = require("gulp-concat");
-const del = require("del");
-const exec = require("child_process").exec;
-const gulp = require("gulp");
-const log = require("fancy-log");
-const imagemin = require("gulp-imagemin");
-const notify = require("gulp-notify");
-const postcss = require("gulp-postcss");
-const rename = require("gulp-rename");
-const run = require("gulp-run");
-const sass = require("gulp-sass")(require("sass"));
-const sourcemaps = require("gulp-sourcemaps");
-const terser = require("gulp-terser");
+import autoprefixer from "autoprefixer";
+import babel from "gulp-babel";
+import {create} from "browser-sync";
+import cleancss from "gulp-clean-css";
+import concat from "gulp-concat";
+import {deleteAsync} from 'del';
+import {exec} from "child_process";
+import gulp from "gulp";
+import log from "fancy-log";
+import imagemin from "gulp-imagemin";
+import notify from "gulp-notify";
+import postcss from "gulp-postcss";
+import run from "gulp-run";
+import sass from "gulp-sass"
+import sourcemaps from "gulp-sourcemaps";
+import terser from "gulp-terser";
 
 // Include paths file.
 const paths = require("./_assets/gulp_config/paths");
 sass.compiler = require("node-sass");
+
+const browserSync = create("gulpfile");
 
 // Uses Sass compiler to process styles, adds vendor prefixes, minifies, then
 // outputs file to the appropriate location.
@@ -60,7 +61,7 @@ gulp.task("build:styles:critical", function () {
 gulp.task("build:styles", gulp.series("build:styles:main", "build:styles:critical"));
 
 gulp.task("clean:styles", function () {
-    return del([paths.jekyllCssFiles + "main.css",
+    return deleteAsync([paths.jekyllCssFiles + "main.css",
         paths.siteCssFiles + "main.css",
         "_includes/critical.css"
     ]);
@@ -88,7 +89,7 @@ gulp.task("build:scripts:global", function () {
 });
 
 gulp.task("clean:scripts", function () {
-    return del([paths.jekyllJsFiles + "main.js", paths.siteJsFiles + "main.js"]);
+    return deleteAsync([paths.jekyllJsFiles + "main.js", paths.siteJsFiles + "main.js"]);
 });
 
 // Concatenates and uglifies leaflet JS files and outputs result to the
@@ -105,7 +106,7 @@ gulp.task("build:scripts:leaflet", function () {
 });
 
 gulp.task("clean:scripts:leaflet", function () {
-    return del([paths.jekyllJsFiles + "leaflet.js", paths.siteJsFiles + "leaflet.js"]);
+    return deleteAsync([paths.jekyllJsFiles + "leaflet.js", paths.siteJsFiles + "leaflet.js"]);
 });
 
 // Builds all scripts.
@@ -121,7 +122,7 @@ gulp.task("build:images", function () {
 });
 
 gulp.task("clean:images", function () {
-    return del([paths.jekyllImageFiles, paths.siteImageFiles]);
+    return deleteAsync([paths.jekyllImageFiles, paths.siteImageFiles]);
 });
 
 // Runs jekyll build command.
@@ -149,7 +150,7 @@ gulp.task("htmlproofer", function() {
 
 // Deletes the entire _site directory.
 gulp.task("clean:jekyll", function () {
-    return del(["_site"]);
+    return deleteAsync(["_site"]);
 });
 
 gulp.task("clean", gulp.series("clean:jekyll",
