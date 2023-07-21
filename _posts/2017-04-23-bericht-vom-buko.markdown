@@ -218,7 +218,7 @@ Am Nachmittag begann die Mitgliederversammlung mit einer Diskussion zur aktuelle
 politischen Lage, wo ich mich in einem Redebeitrag auf die politischen 
 Gestaltungsmöglichkeiten konzentriert habe. Dabei bezog ich mich auf den
 [Lightning-Talk von Zestyping vom 33. Chaos Communication Congress](https://media.ccc.de/v/33c3-8089-lightning_talks_day_4). In dem Lightning-Talk geht es um den 
-[neveragain.tech](http://neveragain.tech/)-Pledge. Liebend gerne würde ich an 
+[neveragain.tech](https://neveragain.tech/)-Pledge. Liebend gerne würde ich an 
 dieser Stelle die Aufzeichnung des Redebeitrags vom BuKo verlinken, aber der
 BuKo wird nicht aufgezeichnet. Es gibt lediglich einen Livestream.
 

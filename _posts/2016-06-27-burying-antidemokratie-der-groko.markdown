@@ -34,13 +34,13 @@ Es gab in den vergangenen Tagen auch nicht namentliche Abstimmungen die auf
 der verlinkten Seite nicht so einfach abrufbar sind. Diese findet man bei
 den Tagesordnungen der vergangenen Sitzungen:
 
-* [178. Sitzungstag](http://dip21.bundestag.de/dip21/btp/18/18178.pdf)
-* [179. Sitzungstag](http://dip21.bundestag.de/dip21/btp/18/18179.pdf)
-* [180. Sitzungstag](http://dip21.bundestag.de/dip21/btp/18/18180.pdf)
+* [178. Sitzungstag](https://dserver.bundestag.de/btp/18/18178.pdf)
+* [179. Sitzungstag](https://dserver.bundestag.de/btp/18/18179.pdf)
+* [180. Sitzungstag](https://dserver.bundestag.de/btp/18/18180.pdf)
 
 Unter diesen ebenfalls beschlossenen Gesetzen findet man eine Art "Zwangsbeglückung"
-mit [Smart-Metern](http://dip21.bundestag.de/dip21/btd/18/075/1807555.pdf) und
-ein im Eilverfahren beschlossenes [Anti-Terror-Artikelgesetz](http://dip21.bundestag.de/dip21/btd/18/087/1808702.pdf).
+mit [Smart-Metern](https://dserver.bundestag.de/btd/18/075/1807555.pdf) und
+ein im Eilverfahren beschlossenes [Anti-Terror-Artikelgesetz](https://dserver.bundestag.de/btd/18/087/1808702.pdf).
 Es lohnt sich zu letzterem Gesetz, welches am 180. Sitzungstag beschlossen wurde,
 auch den Ausschussbericht anzusehen.
 
@@ -53,7 +53,7 @@ in Schrecken und wundern sich, wie so etwas passieren konnte. Allerdings bleibt
 fraglich, ob sich all diese Leute dann 2017 endlich für einen Politikwechsel
 entscheiden.
 
-In den drei verlinkten Sitzungstagen wurde auch ein [Antrag der Grünen](http://dip21.bundestag.de/dip21/btd/18/088/1808874.pdf) 
+In den drei verlinkten Sitzungstagen wurde auch ein [Antrag der Grünen](https://dserver.bundestag.de/btd/18/088/1808874.pdf) 
 verwiesen an den zuständigen Ausschuss, der sich mit der Situation von queeren Jugendlichen
 beschäftigt. Es bleibt zu hoffen, dass dieser Antrag eine Mehrheit findet. Aber
 wie zu erwarten ist, wird die GroKo auch hier - wenn auch nur aus Prinzip -

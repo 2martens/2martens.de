@@ -53,7 +53,7 @@ nicht etwa beseitigt, sondern nachträglich gesetzlich legitimiert.
 Zuletzt haben es diese Law&Order-Politiker\*innen auch nicht geschafft die
 verwendete Wahlsoftware für Bundestagswahlen sicher vor Hackerangriffen zu machen.
 Nach Erkenntnissen des 
-<a href="http://ccc.de/de/updates/2017/pc-wahl" rel="nofollow">Chaos Computer Clubs</a> 
+<a href="https://ccc.de/de/updates/2017/pc-wahl" rel="nofollow">Chaos Computer Clubs</a> 
 ist es vergleichsweise einfach die
 Software zu übernehmen und damit die Wahlergebnisse zu manipulieren.
 

@@ -58,7 +58,7 @@ Fachbereich mit einer solchen Tradition zu studieren.
 Entsprechend war und ist am Fachbereich die Begeisterung für Datenschutz
 und freie Software sehr stark - im Übrigen bei Lehrenden und Studierenden. In 
 dieser Richtung ist der FSR auch allgemeinpolitisch tätig und war stets 
-Unterstützer des Hamburger <a href="http://www.stop-watching-hamburg.de/" rel="nofollow">Bündnis gegen Überwachung</a> 
+Unterstützer des Hamburger <a href="https://www.stop-watching-hamburg.de/" rel="nofollow">Bündnis gegen Überwachung</a> 
 und hat an den Freiheit 
 statt Angst Demos teilgenommen. Zur Bundestagswahl 2013 gab es eine relativ
 spät geplante Podiumsdiskussion bei der leider nur die CDU mit Originalpersonal

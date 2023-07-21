@@ -29,7 +29,7 @@ Als Reaktion auf die Fremdbezeichnung ist diese positiv aufgegriffen worden. Es 
 Über die Reform des Urheberrechts stimmen die Abgeordneten in drei Tagen ab. Bisher haben 126 Abgeordnete auf 
 [Pledge 2019][5] zugesagt gegen Uploadfilter zu stimmen.
 
-[0]: http://www.create.ac.uk/wp-content/uploads/2017/02/OpenLetter_EU_Copyright_Reform_22_02_2017.pdf
+[0]: https://www.create.ac.uk/wp-content/uploads/2017/02/OpenLetter_EU_Copyright_Reform_22_02_2017.pdf
 [1]: https://twitter.com/Europarl_DE/status/1100705082470027264
 [2]: https://www.change.org/p/european-parliament-stop-the-censorship-machinery-save-the-internet
 [3]: https://medium.com/@EuropeanCommission/the-copyright-directive-how-the-mob-was-told-to-save-the-dragon-and-slay-the-knight-b35876008f16

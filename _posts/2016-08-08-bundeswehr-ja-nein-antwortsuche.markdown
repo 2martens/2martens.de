@@ -34,7 +34,7 @@ Außenperspektive als Zivilist einnehme. Dabei ist mein Vater in der Bundeswehr
 kein Unbekannter, sondern hat mittlerweile den Dienstgrad eines Flotillenadmirals
 erlangt und arbeitet in der Teilstreitkraft Marine. Einige Infos gibt es auf
 der [Wikipediaseite](https://de.wikipedia.org/wiki/Jean_Martens) und in einer
-Pressemitteilung zum letztjährigen [Kommandowechsel in Kiel](http://www.presseportal.de/pm/67428/3000562).
+Pressemitteilung zum letztjährigen [Kommandowechsel in Kiel](https://www.presseportal.de/pm/67428/3000562).
 Ich würde lügen, wenn ich sagte, dass dies alles überhaupt keinen Einfluss auf
 mich hat. Allerdings wäre es auch gelogen zu sagen, dass ich deswegen keine
 Kritik äußern könnte. Schließlich ist es weder mein Verdienst noch mein Verschulden,

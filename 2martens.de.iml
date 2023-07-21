@@ -114,5 +114,7 @@
     <orderEntry type="library" scope="PROVIDED" name="webrick (v1.8.1, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="yell (v2.2.2, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="zeitwerk (v2.6.8, ruby-3.2.2-p53) [gem]" level="application" />
+    <orderEntry type="library" name="bootstrap" level="application" />
+    <orderEntry type="library" name="jquery-3.7.0" level="application" />
   </component>
 </module>
