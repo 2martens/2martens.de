@@ -8,7 +8,7 @@ gem 'jekyll', '~> 4.3'
 group :jekyll_plugins do
   gem 'jekyll-avatar'
   gem 'jekyll-coffeescript'
-  gem 'jekyll-commonmark-ghpages'
+  gem 'jekyll-commonmark', '~> 1.4.0'
   gem 'jekyll-default-layout', git: 'https://github.com/benbalter/jekyll-default-layout'
   gem 'jekyll-feed'
   gem 'jekyll-gist'
