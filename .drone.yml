@@ -70,7 +70,7 @@ steps:
         - cp -r tmp/build/* html/
         - rm -rf tmp/build
   - name: notify
-    image: drillster/drone-email
+    image: 2martens/drone-email
     environment:
       EMAIL_USERNAME:
         from_secret: email_username
