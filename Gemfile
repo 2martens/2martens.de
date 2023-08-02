@@ -27,7 +27,7 @@ group :jekyll_plugins do
   gem 'jemoji'
 end
 # themes
-gem 'minima'
+gem 'minima', git: 'https://github.com/jekyll/minima'
 # end themes
 gem 'kramdown'
 gem 'liquid'

@@ -5,6 +5,15 @@ GIT
     jekyll-default-layout (0.1.5)
       jekyll (>= 3.0, < 5.0)
 
+GIT
+  remote: https://github.com/jekyll/minima
+  revision: 2863624b903b17f838d6ce8d2f77900fa9d3c864
+  specs:
+    minima (3.0.0.dev)
+      jekyll (>= 3.5, < 5.0)
+      jekyll-feed (~> 0.9)
+      jekyll-seo-tag (~> 2.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -165,10 +174,6 @@ GEM
     mini_portile2 (2.8.4)
     mini_racer (0.8.0)
       libv8-node (~> 18.16.0.0)
-    minima (2.5.1)
-      jekyll (>= 3.5, < 5.0)
-      jekyll-feed (~> 0.9)
-      jekyll-seo-tag (~> 2.1)
     minitest (5.18.1)
     nokogiri (1.15.3)
       mini_portile2 (~> 2.8.2)
@@ -290,7 +295,7 @@ DEPENDENCIES
   loofah (>= 2.3.1)
   mercenary
   mini_racer (~> 0.8.0)
-  minima
+  minima!
   nokogiri (>= 1.10.4)
   rack (~> 2.2.7)
   railties (>= 5.2.2.1)
