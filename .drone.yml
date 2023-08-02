@@ -52,7 +52,8 @@ steps:
       - name: cache
         path: /cache
   - name: deploy
-    image: drillster/drone-rsync
+    pull: always
+    image: 2martens/drone-rsync
     settings:
       hosts: [ "wolf.uberspace.de" ]
       user: martens7
