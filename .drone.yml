@@ -12,6 +12,7 @@ clone:
 steps:
   - name: restore-cache
     privileged: true
+    pull: always
     image: 2martens/drone-volume-cache
     settings:
       restore: true
@@ -23,6 +24,7 @@ steps:
       - name: cache
         path: /cache
   - name: build
+    pull: always
     image: 2martens/ruby-node:3-18
     environment:
       BUNDLE_PATH: .bundle
@@ -70,6 +72,7 @@ steps:
         - cp -r tmp/build/* html/
         - rm -rf tmp/build
   - name: notify
+    pull: always
     image: 2martens/drone-email
     environment:
       EMAIL_USERNAME:
