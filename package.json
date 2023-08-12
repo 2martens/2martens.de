@@ -40,7 +40,7 @@
     "mixin-deep": "^2.0.1",
     "node-sass": "^9.0.0",
     "postcss": "^8.4.27",
-    "regenerator-runtime": "^0.13.11",
+    "regenerator-runtime": "^0.14.0",
     "sass": "^1.65.1",
     "set-value": "^4.1.0"
   },
