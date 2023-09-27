@@ -6,7 +6,12 @@ categories: speeches
 ---
 
 Die NoCookie-Einbindung klappt nicht, daher nur als Link zur passenden
-Stelle im Video: https://www.youtube.com/live/9OK0AT07AoY?feature=shared&t=11095
+Stelle im Video: 
+<div>
+    <a href="https://www.youtube.com/live/9OK0AT07AoY?feature=shared&t=11095">
+    Rede auf der BDK im Januar 2018
+    </a>
+</div>
 
 Liebe Freund\*innen, liebe Menschen,
 
