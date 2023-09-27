@@ -5,11 +5,8 @@ date:   2018-01-30 10:00:00 +0200
 categories: speeches
 ---
 
-<div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" width="560" height="315" 
-src="https://www.youtube-nocookie.com/embed/zokQdqvSyog?rel=0" 
-frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
-</div>
+Die NoCookie-Einbindung klappt nicht, daher nur als Link zur passenden
+Stelle im Video: https://www.youtube.com/live/9OK0AT07AoY?feature=shared&t=11095
 
 Liebe Freund\*innen, liebe Menschen,
 
