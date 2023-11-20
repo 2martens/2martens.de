@@ -1,0 +1,855 @@
+repo_name: 2martens/2martens.de
+report_id: 87a37d24722431879d10f24e7c9c776d
+repo_type: Public
+timestamp: '2023-11-20T08:55:12+00:00'
+requested_by: 2martens
+provider: github
+branch: master
+detected_tools_count: 62
+tools:
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source: Repo Metadata
+- name: Liquid
+  description: Open-source template language written in Ruby
+  website_url: https://shopify.github.io/liquid
+  version: 4.0.4
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Templating Languages & Extensions
+  image_url: https://img.stackshare.io/service/1746/no-img-open-source.png
+  detection_source_url: Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Jim Martens
+  last_updated_on: 2017-12-24 14:02:31.000000000 Z
+- name: Ruby
+  description: A dynamic, interpreted, open source programming language with a focus
+    on simplicity and productivity
+  website_url: https://www.ruby-lang.org
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/989/ruby.png
+  detection_source: Repo Metadata
+- name: Autoprefixer
+  description: PostCSS plugin to parse CSS and add vendor prefixes to CSS rules
+  website_url: https://github.com/postcss/autoprefixer
+  open_source: false
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: CSS Pre-processors / Extensions
+  image_url: https://img.stackshare.io/service/2202/72d087642cfce6fef6f2dabec5bf49e8_400x400.png
+  detection_source: package.json
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2023-10-01 22:46:58.000000000 Z
+- name: Bootstrap
+  description: Simple and flexible HTML, CSS, and JS for popular UI components and
+    interactions
+  website_url: http://getbootstrap.com/
+  version: 5.3.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Front-End Frameworks
+  image_url: https://img.stackshare.io/service/1101/C9QJ7V3X.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2023-10-01 22:48:57.000000000 Z
+- name: Sass
+  description: Syntactically Awesome Style Sheets
+  website_url: http://sass-lang.com/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: CSS Pre-processors / Extensions
+  image_url: https://img.stackshare.io/service/1171/jCR2zNJV.png
+  detection_source: package.json
+  last_updated_by: Jim Martens
+  last_updated_on: 2019-02-27 13:52:40.000000000 Z
+- name: jQuery
+  description: The Write Less, Do More, JavaScript Library.
+  website_url: http://jquery.com/
+  version: 3.7.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Javascript UI Libraries
+  image_url: https://img.stackshare.io/service/1021/lxEKmMnB_400x400.jpg
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2023-11-01 22:27:18.000000000 Z
+- name: Babel
+  description: Use next generation JavaScript, today.
+  website_url: http://babeljs.io/
+  version: 7.23.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: JavaScript Compilers
+  image_url: https://img.stackshare.io/service/2739/-1wfGjNw.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: Jim Martens
+  last_updated_on: 2023-07-21 18:57:33.000000000 Z
+- name: Drone.io
+  description: Open source continuous integration platform built on Docker
+  website_url: https://drone.io/
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Continuous Integration
+  image_url: https://img.stackshare.io/service/668/R_wMcCqN_400x400.png
+  detection_source: ".drone.yml"
+  last_updated_by: Jim Martens
+  last_updated_on: 2023-08-02 10:33:33.000000000 Z
+- name: ESLint
+  description: The fully pluggable JavaScript code quality tool
+  website_url: http://eslint.org/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Code Review
+  image_url: https://img.stackshare.io/service/3337/Q4L7Jncy.jpg
+  detection_source: ".eslintrc"
+  last_updated_by: Jim Martens
+  last_updated_on: 2018-11-24 14:26:30.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source: Repo Metadata
+- name: RuboCop
+  description: A Ruby static code analyzer, based on the community Ruby style guide
+  website_url: http://batsov.com/rubocop/
+  version: 1.57.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Code Review
+  image_url: https://img.stackshare.io/service/2643/rubocop.png
+  detection_source_url: Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Jim Martens
+  last_updated_on: 2016-04-15 12:43:30.000000000 Z
+- name: RubyGems
+  description: Easily download, install, and use ruby software packages on your system
+  website_url: https://rubygems.org/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/service/12795/5jL6-BA5_400x400.jpeg
+  detection_source: Gemfile
+  last_updated_by: Jim Martens
+  last_updated_on: 2016-04-15 12:43:30.000000000 Z
+- name: Travis CI
+  description: A hosted continuous integration service for open source and private
+    projects
+  website_url: http://travis-ci.com/
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Continuous Integration
+  image_url: https://img.stackshare.io/service/460/Lu6cGu0z_400x400.png
+  detection_source: ".travis.yml"
+  last_updated_by: Jim Martens
+  last_updated_on: 2017-12-25 19:24:33.000000000 Z
+- name: Yarn
+  description: A new package manager for JavaScript
+  website_url: https://yarnpkg.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/5848/44mC-kJ3.jpg
+  detection_source: yarn.lock
+  last_updated_by: Jim Martens
+  last_updated_on: 2019-02-27 15:11:16.000000000 Z
+- name: gulp
+  description: The streaming build system
+  website_url: http://gulpjs.com/
+  version: 4.0.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: JS Build Tools / JS Task Runners
+  image_url: https://img.stackshare.io/service/844/iruTC031.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: Jim Martens
+  last_updated_on: 2023-07-21 18:23:39.000000000 Z
+- name: npm
+  description: The package manager for JavaScript.
+  website_url: https://www.npmjs.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source: package.json
+  last_updated_by: Jim Martens
+  last_updated_on: 2019-02-27 13:52:40.000000000 Z
+- name: HTML
+  description: Hypertext Markup Language for creating web pages.
+  website_url: http://
+  open_source: false
+  hosted_saas: false
+  image_url: https://img.stackshare.io/service/2270/no-img-open-source.png
+  detection_source: _includes/audio.html
+  last_updated_by: Jim Martens
+  last_updated_on: 2019-07-16 13:48:09.000000000 Z
+- name: Jekyll
+  description: Blog-aware, static site generator in Ruby
+  website_url: http://jekyllrb.com/
+  version: 4.3.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Application Utilities
+  sub_category: Static Site Generators
+  image_url: https://img.stackshare.io/service/1114/ad968c1615d956e800fa36494314f48c.jpeg
+  detection_source_url: Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Jim Martens
+  last_updated_on: 2023-08-02 14:45:38.000000000 Z
+- name: Lodash
+  description: A JavaScript utility library
+  website_url: https://lodash.com
+  version: 4.17.21
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Javascript Utilities & Libraries
+  image_url: https://img.stackshare.io/service/2438/lodash.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2021-02-22 05:06:04.000000000 Z
+- name: Shell
+  description: A shell is a text-based terminal, used for manipulating programs and
+    files. Shell scripts typically manage program execution.
+  website_url: https://en.wikipedia.org/wiki/Shell_script
+  open_source: false
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/4631/default_c2062d40130562bdc836c13dbca02d318205a962.png
+  detection_source: Repo Metadata
+- name: "@babel/core"
+  description: Babel compiler core
+  package_url: https://www.npmjs.com/@babel/core
+  version: 7.23.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15810/default_004658cda9b38934f2871435e9dc15608c86e8be.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2023-11-05 08:21:24.000000000 Z
+- name: "@babel/preset-env"
+  description: A Babel preset for each environment
+  package_url: https://www.npmjs.com/@babel/preset-env
+  version: 7.23.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15819/default_98aa227f51aa9d787815ec3fd98d0ab2bfebbb91.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2023-11-05 08:21:24.000000000 Z
+- name: browser-sync
+  description: Live CSS Reload &amp; Browser Syncing
+  package_url: https://www.npmjs.com/browser-sync
+  version: 2.29.3
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16034/default_a9b6ac3c2fe43713f9a8e43d4668d0352ad0d247.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2023-05-17 22:57:04.000000000 Z
+- name: child_process
+  description: This package name is not currently in use, but was formerly occupied
+    by another package
+  package_url: https://www.npmjs.com/child_process
+  version: 1.0.2
+  license: ISC
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16816/default_2e3ed47575edcaf407097e6171e3d4cb8681a6b3.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: Jim Martens
+  last_updated_on: 2019-02-27 13:52:40.000000000 Z
+- name: core-js
+  description: Standard library
+  package_url: https://www.npmjs.com/core-js
+  version: 3.33.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15869/default_7c39a83d4acd952df89b1ebfdb94c8646324fbf1.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2023-11-01 22:27:30.000000000 Z
+- name: del
+  description: Delete files and directories
+  package_url: https://www.npmjs.com/del
+  version: 7.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15907/default_a582b9fecca65f37fe68520c8f84d3bcae35db24.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: Jim Martens
+  last_updated_on: 2019-02-27 13:52:40.000000000 Z
+- name: fancy-log
+  description: Log things, prefixed with a timestamp
+  package_url: https://www.npmjs.com/fancy-log
+  version: 1.3.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17353/default_c1932d441699b98abea6098c6f8f65e2acb4f5ed.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2022-01-07 22:03:11.000000000 Z
+- name: fstream
+  description: Advanced file system stream things
+  package_url: https://www.npmjs.com/fstream
+  version: 1.0.12
+  license: ISC
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17330/default_1e90600620937d8a59b79d4a426c6d60e5051788.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: Jim Martens
+  last_updated_on: 2019-06-02 10:36:42.000000000 Z
+- name: gulp-babel
+  description: Use next generation JavaScript, today
+  package_url: https://www.npmjs.com/gulp-babel
+  version: 8.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15963/default_ac622bc364a601d766b9a6f6039f191492f54d65.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2023-11-05 08:21:24.000000000 Z
+- name: gulp-clean-css
+  description: Minify css with clean-css
+  package_url: https://www.npmjs.com/gulp-clean-css
+  version: 4.3.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16301/default_3b7197abc4df3d7fa7c5292f17b2e6fb0cd1c8d4.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: Jim Martens
+  last_updated_on: 2023-07-21 18:23:39.000000000 Z
+- name: gulp-concat
+  description: Concatenates files
+  package_url: https://www.npmjs.com/gulp-concat
+  version: 2.6.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15973/default_732016a20524708efe7a4c77497fe9bfeea19ba6.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: Jim Martens
+  last_updated_on: 2023-07-21 18:23:39.000000000 Z
+- name: gulp-imagemin
+  description: Minify PNG, JPEG, GIF and SVG images
+  package_url: https://www.npmjs.com/gulp-imagemin
+  version: 8.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16485/default_0a704f5fac0bffcf529c9a61658d0b9ddbf7504e.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: Jim Martens
+  last_updated_on: 2023-07-21 18:23:39.000000000 Z
+- name: gulp-notify
+  description: Gulp plugin to send messages based on Vinyl Files or Errors to Mac
+    OS X, Linux or Windows using the node-notifier module
+  package_url: https://www.npmjs.com/gulp-notify
+  version: 4.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16337/default_19913b5a2ce8aaeed5a69f95974f9afd07e8e8bc.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: Jim Martens
+  last_updated_on: 2023-07-21 18:23:39.000000000 Z
+- name: gulp-postcss
+  description: PostCSS gulp plugin
+  package_url: https://www.npmjs.com/gulp-postcss
+  version: 9.0.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16282/default_5dfc1810d0882ab844578a326bb8bf19e45e7227.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2023-10-01 22:48:19.000000000 Z
+- name: gulp-rename
+  description: Rename files
+  package_url: https://www.npmjs.com/gulp-rename
+  version: 2.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15895/default_e4668902f8489350db9b0fb228523a571ef05b26.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: Jim Martens
+  last_updated_on: 2023-07-21 18:23:39.000000000 Z
+- name: gulp-run
+  description: Pipe to shell commands in gulp
+  package_url: https://www.npmjs.com/gulp-run
+  version: 1.7.1
+  license: ISC
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17680/default_5d85585fcc59e6736b382217b3bbe45cc52ee795.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2023-08-12 18:37:14.000000000 Z
+- name: gulp-sass
+  description: Gulp plugin for sass
+  package_url: https://www.npmjs.com/gulp-sass
+  version: 5.1.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16002/default_f8be85789693a9901dbcfa43c135c60525ae49a1.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2023-11-01 22:26:54.000000000 Z
+- name: gulp-sourcemaps
+  description: Source map support for Gulp.js
+  package_url: https://www.npmjs.com/gulp-sourcemaps
+  version: 3.0.0
+  license: ISC
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15958/default_4040fefea2f98006727f63d042275b96a275ab2d.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: Jim Martens
+  last_updated_on: 2023-07-21 18:23:39.000000000 Z
+- name: js-yaml
+  description: YAML 1.2 parser and serializer
+  package_url: https://www.npmjs.com/js-yaml
+  version: 4.1.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15997/default_f8be85789693a9901dbcfa43c135c60525ae49a1.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2021-04-15 05:03:59.000000000 Z
+- name: lodash.template
+  description: The Lodash method `_.template` exported as a module
+  package_url: https://www.npmjs.com/lodash.template
+  version: 3.6.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17112/default_0ffbf6d9ee2940fe94be8424fd9afff068fff458.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2021-02-22 05:06:04.000000000 Z
+  vulnerabilities:
+  - name: Prototype Pollution in lodash
+    cve_id: CVE-2019-10744
+    cve_url: https://github.com/advisories/GHSA-jf85-cpcp-j695
+    detected_date: Jan 28
+    severity: critical
+    first_patched: 4.5.0
+- name: micromatch
+  description: Glob matching for javascript/node.js
+  package_url: https://www.npmjs.com/micromatch
+  version: 3.1.10
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17143/default_0ffbf6d9ee2940fe94be8424fd9afff068fff458.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2022-03-24 22:02:48.000000000 Z
+- name: node-sass
+  description: Wrapper around libsass
+  package_url: https://www.npmjs.com/node-sass
+  version: 9.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15827/default_db4a7791d2f1174547374b9b587bc10fec088a5a.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2023-11-01 22:26:54.000000000 Z
+- name: postcss
+  description: Tool for transforming styles with JS plugins
+  package_url: https://www.npmjs.com/postcss
+  version: 7.0.36
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16012/default_7a88bebb451873cc63bd99007de5bd3bb8ef85de.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2023-10-01 22:48:19.000000000 Z
+  vulnerabilities:
+  - name: PostCSS line return parsing error
+    cve_id: CVE-2023-44270
+    cve_url: https://github.com/advisories/GHSA-7fh5-64p2-3v2j
+    detected_date: Oct 4
+    severity: moderate
+    first_patched: 8.4.31
+- name: regenerator-runtime
+  description: Runtime for Regenerator-compiled generator and async functions
+  package_url: https://www.npmjs.com/regenerator-runtime
+  version: 0.13.11
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16148/default_9a7a7dcd69c12c746dc4000dc4d1b75758079c9f.png
+  detection_source_url: yarn.lock
+  detection_source: package.json
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2023-08-12 18:37:14.000000000 Z
+- name: actionview
+  description: Simple
+  package_url: https://rubygems.org/actionview
+  version: 7.1.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/19060/default_7520676ca0e090ecd07df08a8e0994b056912237.png
+  detection_source_url: Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Jim Martens
+  last_updated_on: 2020-05-11 16:17:20.000000000 Z
+- name: activesupport
+  description: A toolkit of support libraries and Ruby core extensions extracted from
+    the Rails framework
+  package_url: https://rubygems.org/activesupport
+  version: 7.1.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/18817/default_b17f14dbef6c1275120b34d9ec2eff5942499bd5.png
+  detection_source_url: Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Jim Martens
+  last_updated_on: 2020-05-11 16:17:20.000000000 Z
+- name: html-proofer
+  description: Test your rendered HTML files to make sure they're accurate
+  package_url: https://rubygems.org/html-proofer
+  version: 5.0.7
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/19495/default_8a79db3626c57c6bb46227c448ffd01861613398.png
+  detection_source_url: Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Jim Martens
+  last_updated_on: 2017-12-25 19:24:33.000000000 Z
+- name: jekyll-feed
+  description: A Jekyll plugin to generate an Atom feed of your Jekyll posts
+  package_url: https://rubygems.org/jekyll-feed
+  version: 0.17.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/19149/default_b0a1033a29112f6f50b1dd3157e5fbf94dd2778a.png
+  detection_source_url: Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Jim Martens
+  last_updated_on: 2023-08-02 14:45:38.000000000 Z
+- name: jekyll-paginate
+  description: Built-in Pagination Generator for Jekyll
+  package_url: https://rubygems.org/jekyll-paginate
+  version: 1.1.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/19371/default_ac0591cdb829f62a4300d942f96aea1bb642351d.png
+  detection_source_url: Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Jim Martens
+  last_updated_on: 2023-08-02 14:45:38.000000000 Z
+- name: jekyll-seo-tag
+  description: A Jekyll plugin to add metadata tags for search engines and social
+    networks to better index and display your site's content
+  package_url: https://rubygems.org/jekyll-seo-tag
+  version: 2.8.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/19137/default_302643c2b99caa1c440c0d4aa23d4230e1cc78e3.png
+  detection_source_url: Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Jim Martens
+  last_updated_on: 2023-08-02 14:45:38.000000000 Z
+- name: jekyll-sitemap
+  description: Automatically generate a sitemap.xml for your Jekyll site
+  package_url: https://rubygems.org/jekyll-sitemap
+  version: 1.4.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/19321/default_31ccb7684f50eae9f0c40cb9965cc32299f8935e.png
+  detection_source_url: Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Jim Martens
+  last_updated_on: 2023-08-02 14:45:38.000000000 Z
+- name: kramdown
+  description: Kramdown is yet-another-markdown-parser but fast
+  package_url: https://rubygems.org/kramdown
+  version: 2.4.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/18939/default_9835367d7a13be70dd38d3b7dfa4b8514b31a43d.png
+  detection_source_url: Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Jim Martens
+  last_updated_on: 2017-12-24 14:02:31.000000000 Z
+- name: listen
+  description: The Listen gem listens to file modifications and notifies you about
+    the changes
+  package_url: https://rubygems.org/listen
+  version: 3.8.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/18942/default_a51418802dbfb428c729400211798b5046fe4140.png
+  detection_source_url: Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Jim Martens
+  last_updated_on: 2017-12-24 14:02:31.000000000 Z
+- name: loofah
+  description: Loofah is a general library for manipulating and transforming HTML/XML
+    documents and fragments, built on top of Nokogiri
+  package_url: https://rubygems.org/loofah
+  version: 2.21.4
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/19467/default_9fadec62becac7e7d4b0d823b4daea6bad21b1be.png
+  detection_source_url: Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Jim Martens
+  last_updated_on: 2019-11-30 16:37:32.000000000 Z
+- name: mercenary
+  description: Lightweight and flexible library for writing command-line apps in Ruby
+  package_url: https://rubygems.org/mercenary
+  version: 0.4.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/19524/default_1ac80bcceca19fc3955ee33a26814ab8de230f7e.png
+  detection_source_url: Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Jim Martens
+  last_updated_on: 2017-12-24 14:02:31.000000000 Z
+- name: nokogiri
+  description: Nokogiri
+  package_url: https://rubygems.org/nokogiri
+  version: 1.15.4
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/18823/default_b8fbb83e23c963442e15398c5b56262cc6267d6f.png
+  detection_source_url: Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Jim Martens
+  last_updated_on: 2019-10-08 19:36:05.000000000 Z
+- name: rack
+  description: Rack provides a minimal, modular and adaptable interface for developing
+    web applications in Ruby
+  package_url: https://rubygems.org/rack
+  version: 3.0.8
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/18839/default_db5cfb0d85d9fd8bfb40a863581417a2a57791ab.png
+  detection_source_url: Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2023-11-05 08:20:38.000000000 Z
+- name: railties
+  description: 'Rails internals: application bootup'
+  package_url: https://rubygems.org/railties
+  version: 7.1.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/18847/default_49e8e438a279d3b7963273823890f9482ce83fb4.png
+  detection_source_url: Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Jim Martens
+  last_updated_on: 2019-03-14 12:59:50.000000000 Z
+- name: rouge
+  description: Rouge aims to a be a simple
+  package_url: https://rubygems.org/rouge
+  version: 4.2.0
+  license: MIT,BSD-2-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/19110/default_06b56c3cf87200ea8cc83429c79e5c5533c80ede.png
+  detection_source_url: Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Jim Martens
+  last_updated_on: 2017-12-24 14:02:31.000000000 Z
+- name: rubyzip
+  description: Rubyzip is a ruby module for reading and writing zip files
+  package_url: https://rubygems.org/rubyzip
+  version: 2.3.2
+  license: BSD-2-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/18887/default_1e22ca9f3f63a8c93249bae500705b9451e7e882.png
+  detection_source_url: Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2021-07-05 22:01:23.000000000 Z
+- name: terminal-table
+  description: Simple, feature rich ascii table generation library
+  package_url: https://rubygems.org/terminal-table
+  version: 3.0.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/18923/default_401820e785202ca0018a36ea3e12ee9a92b3efac.png
+  detection_source_url: Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Jim Martens
+  last_updated_on: 2017-12-24 14:02:31.000000000 Z
