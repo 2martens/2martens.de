@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: https://github.com/jekyll/minima
-  revision: 85374864e0311f544f49139078927b41ecbe8792
+  revision: 10124515953527c8990a2de99ae4ddb2a81ffee3
   specs:
     minima (3.0.0.dev)
       jekyll (>= 3.5, < 5.0)
@@ -86,8 +86,8 @@ GEM
     fiber-local (1.0.0)
     forwardable-extended (2.6.0)
     gemoji (4.1.0)
-    google-protobuf (3.25.0)
-    google-protobuf (3.25.0-x86_64-linux)
+    google-protobuf (3.25.1)
+    google-protobuf (3.25.1-x86_64-linux)
     hashery (2.1.2)
     html-pipeline (2.14.3)
       activesupport (>= 2)
@@ -215,7 +215,7 @@ GEM
       ttfunk
     psych (5.1.1.1)
       stringio
-    public_suffix (5.0.3)
+    public_suffix (5.0.4)
     racc (1.7.3)
     rack (3.0.8)
     rack-session (2.0.0)
