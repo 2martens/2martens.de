@@ -61,3 +61,7 @@ exclude:
   - gulpfile.js
   - package.json
   - package-lock.json
+  - techstack.md
+  - techstack.yml
+  - yarn.lock
+  - counter
