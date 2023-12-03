@@ -3,22 +3,22 @@
 ## Tech Stack
 2martens/2martens.de is built on the following main stack:
 - [Drone.io](https://drone.io/) – Continuous Integration
-- [gulp](http://gulpjs.com/) – JS Build Tools / JS Task Runners
+- [gulp](https://gulpjs.com/) – JS Build Tools / JS Task Runners
 - [Ruby](https://www.ruby-lang.org) – Languages
-- [jQuery](http://jquery.com/) – Javascript UI Libraries
-- [Bootstrap](http://getbootstrap.com/) – Front-End Frameworks
-- [Jekyll](http://jekyllrb.com/) – Static Site Generators
-- [Sass](http://sass-lang.com/) – CSS Pre-processors / Extensions
+- [jQuery](https://jquery.com/) – Javascript UI Libraries
+- [Bootstrap](https://getbootstrap.com/) – Front-End Frameworks
+- [Jekyll](https://jekyllrb.com/) – Static Site Generators
+- [Sass](https://sass-lang.com/) – CSS Pre-processors / Extensions
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
 - [Liquid](https://shopify.github.io/liquid) – Templating Languages & Extensions
 - [Autoprefixer](https://github.com/postcss/autoprefixer) – CSS Pre-processors / Extensions
 - [Lodash](https://lodash.com) – Javascript Utilities & Libraries
-- [RuboCop](http://batsov.com/rubocop/) – Code Review
-- [Babel](http://babeljs.io/) – JavaScript Compilers
-- [ESLint](http://eslint.org/) – Code Review
+- [RuboCop](https://batsov.com/rubocop/) – Code Review
+- [Babel](https://babeljs.io/) – JavaScript Compilers
+- [ESLint](https://eslint.org/) – Code Review
 - [Shell](https://en.wikipedia.org/wiki/Shell_script) – Shells
 - [Yarn](https://yarnpkg.com/) – Front End Package Manager
-- [Travis CI](http://travis-ci.com/) – Continuous Integration
+- [Travis CI](https://travis-ci.com/) – Continuous Integration
 
 Full tech stack [here](/techstack.md)
 --- Readme.md Snippet without images End ---
@@ -27,22 +27,22 @@ Full tech stack [here](/techstack.md)
 ## Tech Stack
 2martens/2martens.de is built on the following main stack:
 - <img width='25' height='25' src='https://img.stackshare.io/service/668/R_wMcCqN_400x400.png' alt='Drone.io'/> [Drone.io](https://drone.io/) – Continuous Integration
-- <img width='25' height='25' src='https://img.stackshare.io/service/844/iruTC031.png' alt='gulp'/> [gulp](http://gulpjs.com/) – JS Build Tools / JS Task Runners
+- <img width='25' height='25' src='https://img.stackshare.io/service/844/iruTC031.png' alt='gulp'/> [gulp](https://gulpjs.com/) – JS Build Tools / JS Task Runners
 - <img width='25' height='25' src='https://img.stackshare.io/service/989/ruby.png' alt='Ruby'/> [Ruby](https://www.ruby-lang.org) – Languages
-- <img width='25' height='25' src='https://img.stackshare.io/service/1021/lxEKmMnB_400x400.jpg' alt='jQuery'/> [jQuery](http://jquery.com/) – Javascript UI Libraries
-- <img width='25' height='25' src='https://img.stackshare.io/service/1101/C9QJ7V3X.png' alt='Bootstrap'/> [Bootstrap](http://getbootstrap.com/) – Front-End Frameworks
-- <img width='25' height='25' src='https://img.stackshare.io/service/1114/ad968c1615d956e800fa36494314f48c.jpeg' alt='Jekyll'/> [Jekyll](http://jekyllrb.com/) – Static Site Generators
-- <img width='25' height='25' src='https://img.stackshare.io/service/1171/jCR2zNJV.png' alt='Sass'/> [Sass](http://sass-lang.com/) – CSS Pre-processors / Extensions
+- <img width='25' height='25' src='https://img.stackshare.io/service/1021/lxEKmMnB_400x400.jpg' alt='jQuery'/> [jQuery](https://jquery.com/) – Javascript UI Libraries
+- <img width='25' height='25' src='https://img.stackshare.io/service/1101/C9QJ7V3X.png' alt='Bootstrap'/> [Bootstrap](https://getbootstrap.com/) – Front-End Frameworks
+- <img width='25' height='25' src='https://img.stackshare.io/service/1114/ad968c1615d956e800fa36494314f48c.jpeg' alt='Jekyll'/> [Jekyll](https://jekyllrb.com/) – Static Site Generators
+- <img width='25' height='25' src='https://img.stackshare.io/service/1171/jCR2zNJV.png' alt='Sass'/> [Sass](https://sass-lang.com/) – CSS Pre-processors / Extensions
 - <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/1746/no-img-open-source.png' alt='Liquid'/> [Liquid](https://shopify.github.io/liquid) – Templating Languages & Extensions
 - <img width='25' height='25' src='https://img.stackshare.io/service/2202/72d087642cfce6fef6f2dabec5bf49e8_400x400.png' alt='Autoprefixer'/> [Autoprefixer](https://github.com/postcss/autoprefixer) – CSS Pre-processors / Extensions
 - <img width='25' height='25' src='https://img.stackshare.io/service/2438/lodash.png' alt='Lodash'/> [Lodash](https://lodash.com) – Javascript Utilities & Libraries
-- <img width='25' height='25' src='https://img.stackshare.io/service/2643/rubocop.png' alt='RuboCop'/> [RuboCop](http://batsov.com/rubocop/) – Code Review
-- <img width='25' height='25' src='https://img.stackshare.io/service/2739/-1wfGjNw.png' alt='Babel'/> [Babel](http://babeljs.io/) – JavaScript Compilers
-- <img width='25' height='25' src='https://img.stackshare.io/service/3337/Q4L7Jncy.jpg' alt='ESLint'/> [ESLint](http://eslint.org/) – Code Review
+- <img width='25' height='25' src='https://img.stackshare.io/service/2643/rubocop.png' alt='RuboCop'/> [RuboCop](https://batsov.com/rubocop/) – Code Review
+- <img width='25' height='25' src='https://img.stackshare.io/service/2739/-1wfGjNw.png' alt='Babel'/> [Babel](https://babeljs.io/) – JavaScript Compilers
+- <img width='25' height='25' src='https://img.stackshare.io/service/3337/Q4L7Jncy.jpg' alt='ESLint'/> [ESLint](https://eslint.org/) – Code Review
 - <img width='25' height='25' src='https://img.stackshare.io/service/4631/default_c2062d40130562bdc836c13dbca02d318205a962.png' alt='Shell'/> [Shell](https://en.wikipedia.org/wiki/Shell_script) – Shells
 - <img width='25' height='25' src='https://img.stackshare.io/service/5848/44mC-kJ3.jpg' alt='Yarn'/> [Yarn](https://yarnpkg.com/) – Front End Package Manager
-- <img width='25' height='25' src='https://img.stackshare.io/service/460/Lu6cGu0z_400x400.png' alt='Travis CI'/> [Travis CI](http://travis-ci.com/) – Continuous Integration
+- <img width='25' height='25' src='https://img.stackshare.io/service/460/Lu6cGu0z_400x400.png' alt='Travis CI'/> [Travis CI](https://travis-ci.com/) – Continuous Integration
 
 Full tech stack [here](/techstack.md)
 --- Readme.md Snippet with images End ---
@@ -98,7 +98,7 @@ Full tech stack [here](/techstack.md)
 <td align='center'>
   <img width='36' height='36' src='https://img.stackshare.io/service/1101/C9QJ7V3X.png' alt='Bootstrap'>
   <br>
-  <sub><a href="http://getbootstrap.com/">Bootstrap</a></sub>
+  <sub><a href="https://getbootstrap.com/">Bootstrap</a></sub>
   <br>
   <sub>v5.3.2</sub>
 </td>
@@ -106,7 +106,7 @@ Full tech stack [here](/techstack.md)
 <td align='center'>
   <img width='36' height='36' src='https://img.stackshare.io/service/1171/jCR2zNJV.png' alt='Sass'>
   <br>
-  <sub><a href="http://sass-lang.com/">Sass</a></sub>
+  <sub><a href="https://sass-lang.com/">Sass</a></sub>
   <br>
   <sub></sub>
 </td>
@@ -114,7 +114,7 @@ Full tech stack [here](/techstack.md)
 <td align='center'>
   <img width='36' height='36' src='https://img.stackshare.io/service/1021/lxEKmMnB_400x400.jpg' alt='jQuery'>
   <br>
-  <sub><a href="http://jquery.com/">jQuery</a></sub>
+  <sub><a href="https://jquery.com/">jQuery</a></sub>
   <br>
   <sub>v3.7.1</sub>
 </td>
@@ -127,7 +127,7 @@ Full tech stack [here](/techstack.md)
   <td align='center'>
   <img width='36' height='36' src='https://img.stackshare.io/service/2739/-1wfGjNw.png' alt='Babel'>
   <br>
-  <sub><a href="http://babeljs.io/">Babel</a></sub>
+  <sub><a href="https://babeljs.io/">Babel</a></sub>
   <br>
   <sub>v7.23.2</sub>
 </td>
@@ -143,7 +143,7 @@ Full tech stack [here](/techstack.md)
 <td align='center'>
   <img width='36' height='36' src='https://img.stackshare.io/service/3337/Q4L7Jncy.jpg' alt='ESLint'>
   <br>
-  <sub><a href="http://eslint.org/">ESLint</a></sub>
+  <sub><a href="https://eslint.org/">ESLint</a></sub>
   <br>
   <sub></sub>
 </td>
@@ -151,7 +151,7 @@ Full tech stack [here](/techstack.md)
 <td align='center'>
   <img width='36' height='36' src='https://img.stackshare.io/service/1046/git.png' alt='Git'>
   <br>
-  <sub><a href="http://git-scm.com/">Git</a></sub>
+  <sub><a href="https://git-scm.com/">Git</a></sub>
   <br>
   <sub></sub>
 </td>
@@ -159,7 +159,7 @@ Full tech stack [here](/techstack.md)
 <td align='center'>
   <img width='36' height='36' src='https://img.stackshare.io/service/2643/rubocop.png' alt='RuboCop'>
   <br>
-  <sub><a href="http://batsov.com/rubocop/">RuboCop</a></sub>
+  <sub><a href="https://batsov.com/rubocop/">RuboCop</a></sub>
   <br>
   <sub>v1.57.2</sub>
 </td>
@@ -175,7 +175,7 @@ Full tech stack [here](/techstack.md)
 <td align='center'>
   <img width='36' height='36' src='https://img.stackshare.io/service/460/Lu6cGu0z_400x400.png' alt='Travis CI'>
   <br>
-  <sub><a href="http://travis-ci.com/">Travis CI</a></sub>
+  <sub><a href="https://travis-ci.com/">Travis CI</a></sub>
   <br>
   <sub></sub>
 </td>
@@ -193,7 +193,7 @@ Full tech stack [here](/techstack.md)
   <td align='center'>
   <img width='36' height='36' src='https://img.stackshare.io/service/844/iruTC031.png' alt='gulp'>
   <br>
-  <sub><a href="http://gulpjs.com/">gulp</a></sub>
+  <sub><a href="https://gulpjs.com/">gulp</a></sub>
   <br>
   <sub>v4.0.2</sub>
 </td>
@@ -214,7 +214,7 @@ Full tech stack [here](/techstack.md)
   <td align='center'>
   <img width='36' height='36' src='https://img.stackshare.io/service/2270/no-img-open-source.png' alt='HTML'>
   <br>
-  <sub><a href="http://">HTML</a></sub>
+  <sub>HTML</sub>
   <br>
   <sub></sub>
 </td>
@@ -222,7 +222,7 @@ Full tech stack [here](/techstack.md)
 <td align='center'>
   <img width='36' height='36' src='https://img.stackshare.io/service/1114/ad968c1615d956e800fa36494314f48c.jpeg' alt='Jekyll'>
   <br>
-  <sub><a href="http://jekyllrb.com/">Jekyll</a></sub>
+  <sub><a href="https://jekyllrb.com/">Jekyll</a></sub>
   <br>
   <sub>v4.3.2</sub>
 </td>

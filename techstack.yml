@@ -55,7 +55,7 @@ tools:
 - name: Bootstrap
   description: Simple and flexible HTML, CSS, and JS for popular UI components and
     interactions
-  website_url: http://getbootstrap.com/
+  website_url: https://getbootstrap.com/
   version: 5.3.2
   license: MIT
   open_source: true
@@ -69,7 +69,7 @@ tools:
   last_updated_on: 2023-10-01 22:48:57.000000000 Z
 - name: Sass
   description: Syntactically Awesome Style Sheets
-  website_url: http://sass-lang.com/
+  website_url: https://sass-lang.com/
   license: MIT
   open_source: true
   hosted_saas: false
@@ -81,7 +81,7 @@ tools:
   last_updated_on: 2019-02-27 13:52:40.000000000 Z
 - name: jQuery
   description: The Write Less, Do More, JavaScript Library.
-  website_url: http://jquery.com/
+  website_url: https://jquery.com/
   version: 3.7.1
   license: MIT
   open_source: true
@@ -95,7 +95,7 @@ tools:
   last_updated_on: 2023-11-01 22:27:18.000000000 Z
 - name: Babel
   description: Use next generation JavaScript, today.
-  website_url: http://babeljs.io/
+  website_url: https://babeljs.io/
   version: 7.23.2
   license: MIT
   open_source: true
@@ -120,7 +120,7 @@ tools:
   last_updated_on: 2023-08-02 10:33:33.000000000 Z
 - name: ESLint
   description: The fully pluggable JavaScript code quality tool
-  website_url: http://eslint.org/
+  website_url: https://eslint.org/
   license: MIT
   open_source: true
   hosted_saas: false
@@ -132,7 +132,7 @@ tools:
   last_updated_on: 2018-11-24 14:26:30.000000000 Z
 - name: Git
   description: Fast, scalable, distributed revision control system
-  website_url: http://git-scm.com/
+  website_url: https://git-scm.com/
   open_source: true
   hosted_saas: false
   category: Build, Test, Deploy
@@ -141,7 +141,7 @@ tools:
   detection_source: Repo Metadata
 - name: RuboCop
   description: A Ruby static code analyzer, based on the community Ruby style guide
-  website_url: http://batsov.com/rubocop/
+  website_url: https://batsov.com/rubocop/
   version: 1.57.2
   license: MIT
   open_source: true
@@ -167,7 +167,7 @@ tools:
 - name: Travis CI
   description: A hosted continuous integration service for open source and private
     projects
-  website_url: http://travis-ci.com/
+  website_url: https://travis-ci.com/
   open_source: false
   hosted_saas: true
   category: Build, Test, Deploy
@@ -189,7 +189,7 @@ tools:
   last_updated_on: 2019-02-27 15:11:16.000000000 Z
 - name: gulp
   description: The streaming build system
-  website_url: http://gulpjs.com/
+  website_url: https://gulpjs.com/
   version: 4.0.2
   license: MIT
   open_source: true
@@ -214,7 +214,6 @@ tools:
   last_updated_on: 2019-02-27 13:52:40.000000000 Z
 - name: HTML
   description: Hypertext Markup Language for creating web pages.
-  website_url: http://
   open_source: false
   hosted_saas: false
   image_url: https://img.stackshare.io/service/2270/no-img-open-source.png
@@ -223,7 +222,7 @@ tools:
   last_updated_on: 2019-07-16 13:48:09.000000000 Z
 - name: Jekyll
   description: Blog-aware, static site generator in Ruby
-  website_url: http://jekyllrb.com/
+  website_url: https://jekyllrb.com/
   version: 4.3.2
   license: MIT
   open_source: true
