@@ -1,7 +1,8 @@
 repo_name: 2martens/2martens.de
-report_id: bb3862bd41a36b51c861bbdccd5655d0
+report_id: 87a37d24722431879d10f24e7c9c776d
+version: 0.1
 repo_type: Public
-timestamp: '2023-12-14T13:16:00+00:00'
+timestamp: '2024-01-05T08:37:01+00:00'
 requested_by: dependabot[bot]
 provider: github
 branch: master
@@ -16,6 +17,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/2martens/2martens.de
   detection_source: Repo Metadata
 - name: Liquid
   description: Open-source template language written in Ruby
@@ -40,6 +42,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/989/ruby.png
+  detection_source_url: https://github.com/2martens/2martens.de
   detection_source: Repo Metadata
 - name: Autoprefixer
   description: PostCSS plugin to parse CSS and add vendor prefixes to CSS rules
@@ -49,6 +52,7 @@ tools:
   category: Languages & Frameworks
   sub_category: CSS Pre-processors / Extensions
   image_url: https://img.stackshare.io/service/2202/72d087642cfce6fef6f2dabec5bf49e8_400x400.png
+  detection_source_url: https://github.com/2martens/2martens.de/blob/master/package.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
   last_updated_on: 2023-10-01 22:46:58.000000000 Z
@@ -76,6 +80,7 @@ tools:
   category: Languages & Frameworks
   sub_category: CSS Pre-processors / Extensions
   image_url: https://img.stackshare.io/service/3339/rlFcjEdI.png
+  detection_source_url: https://github.com/2martens/2martens.de/blob/master/package.json
   detection_source: package.json
   last_updated_by: Jim Martens
   last_updated_on: 2019-02-27 13:52:40.000000000 Z
@@ -88,6 +93,7 @@ tools:
   category: Languages & Frameworks
   sub_category: CSS Pre-processors / Extensions
   image_url: https://img.stackshare.io/service/1171/jCR2zNJV.png
+  detection_source_url: https://github.com/2martens/2martens.de/blob/master/package.json
   detection_source: package.json
   last_updated_by: Jim Martens
   last_updated_on: 2019-02-27 13:52:40.000000000 Z
@@ -113,6 +119,7 @@ tools:
   category: Data Stores
   sub_category: Database Tools
   image_url: https://img.stackshare.io/service/109221/default_b888cdf5617d936aa6aacf130911906955508639.png
+  detection_source_url: https://github.com/2martens/2martens.de/blob/master/_drafts/article.txt
   detection_source: _drafts/article.txt
   last_updated_by: Jim Martens
   last_updated_on: 2020-03-28 11:20:13.000000000 Z
@@ -138,6 +145,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Continuous Integration
   image_url: https://img.stackshare.io/service/668/R_wMcCqN_400x400.png
+  detection_source_url: https://github.com/2martens/2martens.de/blob/master/.drone.yml
   detection_source: ".drone.yml"
   last_updated_by: Jim Martens
   last_updated_on: 2023-08-02 10:33:33.000000000 Z
@@ -150,6 +158,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Code Review
   image_url: https://img.stackshare.io/service/3337/Q4L7Jncy.jpg
+  detection_source_url: https://github.com/2martens/2martens.de/blob/master/.eslintrc
   detection_source: ".eslintrc"
   last_updated_by: Jim Martens
   last_updated_on: 2018-11-24 14:26:30.000000000 Z
@@ -161,6 +170,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/2martens/2martens.de
   detection_source: Repo Metadata
 - name: RuboCop
   description: A Ruby static code analyzer, based on the community Ruby style guide
@@ -184,6 +194,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Package Managers
   image_url: https://img.stackshare.io/service/12795/5jL6-BA5_400x400.jpeg
+  detection_source_url: https://github.com/2martens/2martens.de/blob/master/Gemfile
   detection_source: Gemfile
   last_updated_by: Jim Martens
   last_updated_on: 2016-04-15 12:43:30.000000000 Z
@@ -196,6 +207,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Continuous Integration
   image_url: https://img.stackshare.io/service/460/Lu6cGu0z_400x400.png
+  detection_source_url: https://github.com/2martens/2martens.de/blob/master/.travis.yml
   detection_source: ".travis.yml"
   last_updated_by: Jim Martens
   last_updated_on: 2017-12-25 19:24:33.000000000 Z
@@ -207,6 +219,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Front End Package Manager
   image_url: https://img.stackshare.io/service/5848/44mC-kJ3.jpg
+  detection_source_url: https://github.com/2martens/2martens.de/blob/master/yarn.lock
   detection_source: yarn.lock
   last_updated_by: Jim Martens
   last_updated_on: 2019-02-27 15:11:16.000000000 Z
@@ -232,6 +245,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Front End Package Manager
   image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/2martens/2martens.de/blob/master/package.json
   detection_source: package.json
   last_updated_by: Jim Martens
   last_updated_on: 2019-02-27 13:52:40.000000000 Z
@@ -241,6 +255,7 @@ tools:
   open_source: false
   hosted_saas: false
   image_url: https://img.stackshare.io/service/2270/no-img-open-source.png
+  detection_source_url: https://github.com/2martens/2martens.de/blob/master/_includes/audio.html
   detection_source: _includes/audio.html
   last_updated_by: Jim Martens
   last_updated_on: 2019-07-16 13:48:09.000000000 Z
@@ -266,6 +281,7 @@ tools:
   category: Communications
   sub_category: Large Language Model Tools
   image_url: https://img.stackshare.io/service/48790/default_5b6c6b73f1ff3775c85d2a1ba954cb87e30cbf13.jpg
+  detection_source_url: https://github.com/2martens/2martens.de/blob/master/_drafts/article.txt
   detection_source: _drafts/article.txt
   last_updated_by: Jim Martens
   last_updated_on: 2020-03-28 11:20:13.000000000 Z
@@ -291,6 +307,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/4631/default_c2062d40130562bdc836c13dbca02d318205a962.png
+  detection_source_url: https://github.com/2martens/2martens.de
   detection_source: Repo Metadata
 - name: "@babel/core"
   description: Babel compiler core
