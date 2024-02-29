@@ -2,7 +2,7 @@ repo_name: 2martens/2martens.de
 report_id: 87a37d24722431879d10f24e7c9c776d
 version: 0.1
 repo_type: Public
-timestamp: '2024-01-05T08:37:01+00:00'
+timestamp: '2024-02-29T18:51:23+00:00'
 requested_by: dependabot[bot]
 provider: github
 branch: master
@@ -868,6 +868,13 @@ tools:
   detection_source: Gemfile
   last_updated_by: Jim Martens
   last_updated_on: 2019-10-08 19:36:05.000000000 Z
+  vulnerabilities:
+  - name: Nokogiri update packaged libxml2 to v2.12.5 to resolve CVE-2024-25062
+    cve_id: 
+    cve_url: https://github.com/advisories/GHSA-xc9x-jj77-9p9j
+    detected_date: Feb 6
+    severity: moderate
+    first_patched: 1.16.2
 - name: rack
   description: Rack provides a minimal, modular and adaptable interface for developing
     web applications in Ruby
@@ -883,6 +890,25 @@ tools:
   detection_source: Gemfile
   last_updated_by: dependabot[bot]
   last_updated_on: 2023-11-05 08:20:38.000000000 Z
+  vulnerabilities:
+  - name: Rack vulnerable to ReDoS in content type parsing (2nd degree polynomial)
+    cve_id: CVE-2024-25126
+    cve_url: https://github.com/advisories/GHSA-22f2-v57c-j9cx
+    detected_date: Feb 29
+    severity: low
+    first_patched: 3.0.9.1
+  - name: Rack Header Parsing leads to Possible Denial of Service Vulnerability
+    cve_id: CVE-2024-26146
+    cve_url: https://github.com/advisories/GHSA-54rr-7fvw-6x8f
+    detected_date: Feb 29
+    severity: low
+    first_patched: 3.0.9.1
+  - name: Rack has possible DoS Vulnerability with Range Header
+    cve_id: CVE-2024-26141
+    cve_url: https://github.com/advisories/GHSA-xj5v-6v4g-jfw6
+    detected_date: Feb 29
+    severity: low
+    first_patched: 3.0.9.1
 - name: railties
   description: 'Rails internals: application bootup'
   package_url: https://rubygems.org/railties
