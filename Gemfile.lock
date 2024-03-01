@@ -181,7 +181,7 @@ GEM
     libv8-node (18.16.0.0)
     libv8-node (18.16.0.0-x86_64-linux)
     liquid (4.0.4)
-    listen (3.8.0)
+    listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     loofah (2.22.0)
