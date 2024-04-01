@@ -177,8 +177,8 @@ GEM
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
     language_server-protocol (3.17.0.3)
-    libv8-node (18.16.0.0)
-    libv8-node (18.16.0.0-x86_64-linux)
+    libv8-node (18.19.0.0)
+    libv8-node (18.19.0.0-x86_64-linux)
     liquid (4.0.4)
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -188,8 +188,8 @@ GEM
       nokogiri (>= 1.12.0)
     mercenary (0.4.0)
     mini_portile2 (2.8.5)
-    mini_racer (0.8.0)
-      libv8-node (~> 18.16.0.0)
+    mini_racer (0.9.0)
+      libv8-node (~> 18.19.0.0)
     minitest (5.22.2)
     mutex_m (0.2.0)
     nokogiri (1.16.2)
@@ -329,7 +329,7 @@ DEPENDENCIES
   listen
   loofah (>= 2.3.1)
   mercenary
-  mini_racer (~> 0.8.0)
+  mini_racer (~> 0.9.0)
   minima!
   nokogiri (>= 1.10.4)
   rack (~> 3.0.9)
