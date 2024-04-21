@@ -31,6 +31,7 @@ steps:
     commands:
       - export LANG="C.UTF-8"
       - export LC_ALL="C.UTF-8"
+      - export CPPFLAGS="-DPNG_ARM_NEON_OPT=0"
       - ruby -e 'puts STDIN.external_encoding' # figure out the encoding used
       - gem install bundler
       - bundle update --bundler
