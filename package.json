@@ -17,7 +17,7 @@
     "braces": "^3.0.2",
     "browser-sync": "^3.0.2",
     "child_process": "^1.0.2",
-    "core-js": "^3.36.1",
+    "core-js": "^3.37.0",
     "del": "^7.0.0",
     "fancy-log": "^2.0.0",
     "fstream": "^1.0.12",
