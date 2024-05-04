@@ -33,7 +33,7 @@ gem 'kramdown'
 gem 'liquid'
 gem 'listen'
 gem 'mercenary'
-gem 'rack', '~> 3.0.9'
+gem 'rack', '~> 3.0.10'
 gem 'railties', '>= 5.2.2.1'
 gem 'rouge'
 gem 'rubocop'
@@ -43,4 +43,4 @@ gem 'loofah', '>= 2.3.1'
 # gem 'ruby-oembed'
 gem 'terminal-table'
 
-gem "mini_racer", "~> 0.9.0"
+gem "mini_racer", "~> 0.12.0"
