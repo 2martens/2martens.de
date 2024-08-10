@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.24.7",
-    "@babel/preset-env": "^7.24.6",
+    "@babel/preset-env": "^7.25.3",
     "autoprefixer": "^10.4.19",
     "braces": "^3.0.3",
     "browser-sync": "^3.0.2",
@@ -39,9 +39,9 @@
     "micromatch": "^4.0.7",
     "mixin-deep": "^2.0.1",
     "node-sass": "^9.0.0",
-    "postcss": "^8.4.39",
+    "postcss": "^8.4.40",
     "regenerator-runtime": "^0.14.1",
-    "sass": "^1.77.6",
+    "sass": "^1.77.8",
     "set-value": "^4.1.0"
   },
   "resolutions": {
