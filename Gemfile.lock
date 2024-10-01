@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: https://github.com/jekyll/minima
-  revision: d7122a0c3e8a61c0e13de37a72c7d8c7b5f3886f
+  revision: bdd81e68f02ad33b7120f565c606a7c5dc25c6e1
   specs:
     minima (3.0.0.dev)
       jekyll (>= 3.5, < 5.0)
@@ -110,7 +110,7 @@ GEM
       yell (~> 2.0)
       zeitwerk (~> 2.5)
     http_parser.rb (0.8.0)
-    i18n (1.14.5)
+    i18n (1.14.6)
       concurrent-ruby (~> 1.0)
     io-console (0.7.2)
     io-event (1.2.2)
@@ -256,7 +256,7 @@ GEM
     regexp_parser (2.9.2)
     reline (0.5.8)
       io-console (~> 0.5)
-    rexml (3.3.7)
+    rexml (3.3.8)
     rouge (4.3.0)
     rubocop (1.65.1)
       json (~> 2.3)
@@ -276,10 +276,10 @@ GEM
     ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
     safe_yaml (1.0.5)
-    sass-embedded (1.78.0)
+    sass-embedded (1.79.4)
       google-protobuf (~> 4.27)
       rake (>= 13)
-    sass-embedded (1.78.0-x86_64-linux-gnu)
+    sass-embedded (1.79.4-x86_64-linux-gnu)
       google-protobuf (~> 4.27)
     sawyer (0.9.2)
       addressable (>= 2.3.5)
@@ -297,7 +297,7 @@ GEM
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.6.0)
     useragent (0.16.10)
-    webrick (1.8.1)
+    webrick (1.8.2)
     yell (2.2.2)
     zeitwerk (2.6.15)
 
