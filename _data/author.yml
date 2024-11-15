@@ -6,9 +6,9 @@ brand_logo_mask: /assets/images/brandMaskIcon.svg
 brand_logo_png: /assets/images/brand.png
 brand_logo_png150: /assets/images/brand150.png
 image_desc:
-age: 29
+age: 30
 location: Hamburg, Germany
-profession: Informatikstudent
+profession: IT-Berater
 cv_link: /cv/
 cv_pdf: /assets/pdf/cv.pdf
 generic_email: topic@2martens.de
@@ -22,7 +22,7 @@ fingerprint_gpg: F0F1 53B6 5BAD 4672 01D7 544E 4739 3ABD 1F96 B7C8
 election_district: Schnelsen
 election_district_listnr: 2
 election_listnr: 10
-election_living_district: Niendorf, Hamburg
+election_living_district: Stellingen, Hamburg
 election_party: Bündnis 90/Die GRÜNEN
 publickey_gpg: /assets/gpg/0x1F96B7C8-pub.asc
 publications:
@@ -41,12 +41,10 @@ skills:
       - English (fluid)
   - category: Programming languages
     items:
-      - Python
       - Java
+      - Python
       - TypeScript
       - JavaScript
-      - PHP
-      - C++
   - category: Markup languages
     items:
       - HTML
