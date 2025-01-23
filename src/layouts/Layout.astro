@@ -1,11 +1,26 @@
+---
+interface Props {
+	appName: string;
+	title: string;
+	author?: string;
+	description?: string;
+}
+
+const { title, author, description, appName } = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<!-- basic meta tags -->
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<meta name="author" content={author} />
+		<meta name="description" content={description} />
+		<meta name="application-name" content={appName} />
+		<title>{title}</title>
 	</head>
 	<body>
 		<slot />

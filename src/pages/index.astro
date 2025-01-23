@@ -1,11 +1,18 @@
 ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from '../components/Header.jsx';
 ---
 
-<Layout>
+<Layout
+	title="2martens.de"
+	description="2martens.de - The official website of Jim Martens"
+	appName="2martens.de"
+>
+	<Header
+		client:load
+		title="Support center"
+		description="Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat."
+	/>
 	<Welcome />
 </Layout>
