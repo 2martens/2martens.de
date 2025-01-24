@@ -13,6 +13,7 @@
     "@astrojs/tailwind": "^5.1.4",
     "@awesome.me/kit-217da5ee1c": "^1.0.7",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@payloadcms/richtext-lexical": "^3.19.0",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
     "astro": "^5.1.7",

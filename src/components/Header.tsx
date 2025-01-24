@@ -1,11 +1,12 @@
 import { byPrefixAndName } from '@awesome.me/kit-217da5ee1c/icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const res = await fetch("http://localhost:3000/api/header-cards")
-const payloadCards = await res.json()
-payloadCards.docs.sort((a, b) => a.order - b.order)
+import { getCollection } from 'astro:content';
 
-export default function Header({ title, description }) {
+const headerCards = await getCollection('headerCards');
+headerCards.sort((a, b) => a.data.order - b.data.order)
+
+export default function Header({ title, description }: { title: string, description: string }) {
   return (
     <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
       <img
@@ -39,12 +40,12 @@ export default function Header({ title, description }) {
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8">
-          {payloadCards.docs.map((card) => (
-            <div key={card.name} className="flex gap-x-4 rounded-xl bg-white/5 p-6 ring-1 ring-white/10 ring-inset">
-              <FontAwesomeIcon icon={byPrefixAndName.fas[card.icon]} aria-hidden="true" className="h-7 w-5 flex-none text-indigo-400" />
+          {headerCards.map((card) => (
+            <div key={card.data.name} className="flex gap-x-4 rounded-xl bg-white/5 p-6 ring-1 ring-white/10 ring-inset">
+              <FontAwesomeIcon icon={byPrefixAndName.fas[card.data.icon]} aria-hidden="true" className="h-7 w-5 flex-none text-indigo-400" />
               <div className="text-base/7">
-                <h3 className="font-semibold text-white">{card.name}</h3>
-                <p className="mt-2 text-gray-300">{card.description}</p>
+                <h3 className="font-semibold text-white">{card.data.name}</h3>
+                <p className="mt-2 text-gray-300">{card.data.description}</p>
               </div>
             </div>
           ))}

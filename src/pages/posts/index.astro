@@ -1,0 +1,18 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BlogOverview from '../../components/BlogOverview.js';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('posts');
+---
+
+<Layout
+	title="2martens.de"
+	description="2martens.de - The official website of Jim Martens"
+	appName="2martens.de"
+>
+	<BlogOverview
+		posts={posts}
+        basehref="/posts"
+	/>
+</Layout>
