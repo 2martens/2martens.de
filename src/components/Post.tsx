@@ -7,7 +7,7 @@ function capitalizeFirstLetter(val: string) {
 
 export default function Post({ post }: { post: CollectionEntry<"posts"> }) {
   return (
-    <div className="bg-white px-6 py-32 lg:px-8">
+    <div className="bg-white px-6 py-16 lg:px-8">
       <div className="mx-auto max-w-3xl text-base/7 text-gray-700">
         {post.data.category && (
           <p className="text-base/7 font-semibold text-indigo-600">

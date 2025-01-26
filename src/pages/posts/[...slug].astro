@@ -1,16 +1,17 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Post from '../../components/Post.tsx';
-import { getCollection, type CollectionEntry } from 'astro:content';
+import Layout from "../../layouts/Layout.astro";
+import Post from "../../components/Post";
+import { getCollection, type CollectionEntry } from "astro:content";
+import Header from "../../components/Header";
 
 interface Props {
-  post: CollectionEntry<'posts'>
+  post: CollectionEntry<"posts">;
 }
 
 // 1. Generate a new path for every collection entry
 export async function getStaticPaths() {
-  const posts = await getCollection('posts');
-  return posts.map(post => ({
+  const posts = await getCollection("posts");
+  return posts.map((post) => ({
     params: { slug: post.data.slug },
     props: { post },
   }));
@@ -18,11 +19,15 @@ export async function getStaticPaths() {
 
 // 2. For your template, you can get the entry directly from the prop
 const { post } = Astro.props;
+const headerMenuItems = await getCollection("headerMenuItems");
+headerMenuItems.sort((a, b) => a.data.order - b.data.order)
 ---
+
 <Layout
-	title={`${post.data.title} - 2martens.de`}
-	description="2martens.de - The official website of Jim Martens"
-	appName="2martens.de"
+  title={`${post.data.title} - 2martens.de`}
+  description="2martens.de - The official website of Jim Martens"
+  appName="2martens.de"
 >
-	<Post post={post} />
+  <Header appName="2martens.de" menuItems={headerMenuItems} client:load />
+  <Post post={post} />
 </Layout>

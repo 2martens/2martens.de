@@ -2,7 +2,7 @@ import type { CollectionEntry } from "astro:content";
 
 export default function BlogOverview({posts, basehref}: {posts: CollectionEntry<'posts'>[], basehref: string}): any {
   return (
-    <div className="bg-white py-24 sm:py-32">
+    <div className="bg-white py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">

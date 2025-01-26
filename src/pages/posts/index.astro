@@ -1,18 +1,19 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import BlogOverview from '../../components/BlogOverview.js';
-import { getCollection } from 'astro:content';
+import Layout from "../../layouts/Layout.astro";
+import BlogOverview from "../../components/BlogOverview.js";
+import { getCollection } from "astro:content";
+import Header from "../../components/Header";
 
-const posts = await getCollection('posts');
+const posts = await getCollection("posts");
+const headerMenuItems = await getCollection("headerMenuItems");
+headerMenuItems.sort((a, b) => a.data.order - b.data.order)
 ---
 
 <Layout
-	title="2martens.de"
-	description="2martens.de - The official website of Jim Martens"
-	appName="2martens.de"
+  title="Blog - 2martens.de"
+  description="2martens.de - The official website of Jim Martens"
+  appName="2martens.de"
 >
-	<BlogOverview
-		posts={posts}
-        basehref="/posts"
-	/>
+  <Header appName="2martens.de" menuItems={headerMenuItems} client:load />
+  <BlogOverview posts={posts} basehref="/posts" />
 </Layout>

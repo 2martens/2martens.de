@@ -2,6 +2,10 @@
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.tsx';
+import { getCollection } from 'astro:content';
+
+const headerMenuItems = await getCollection('headerMenuItems');
+headerMenuItems.sort((a, b) => a.data.order - b.data.order)
 ---
 
 <Layout
@@ -9,9 +13,5 @@ import Header from '../components/Header.tsx';
 	description="2martens.de - The official website of Jim Martens"
 	appName="2martens.de"
 >
-	<Header
-		title="Support center"
-		description="Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat."
-	/>
-	<Welcome />
+	<Header appName="2martens.de" menuItems={headerMenuItems} client:load />
 </Layout>
