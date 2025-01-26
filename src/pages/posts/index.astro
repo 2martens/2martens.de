@@ -23,6 +23,6 @@ footerMenuItems.sort((a, b) => a.data.order - b.data.order)
   appName="2martens.de"
 >
   <Header appName="2martens.de" menuItems={headerMenuItems} client:load />
-  <BlogOverview posts={posts} basehref="/posts" />
+  <BlogOverview title="Blog" description="Collection of blog posts" posts={posts} basehref="/posts" />
   <Footer footerMenuItems={footerMenuItems} socialMediaIcons={footerSocialMediaIcons} />
 </Layout>

@@ -115,8 +115,8 @@ const posts = defineCollection({
       title: z.string(),
       slug: z.string(),
       href: z.string(),
-      updatedAt: z.date(),
-      createdAt: z.date(),
+      updatedAt: z.coerce.date(),
+      createdAt: z.coerce.date(),
     }),
     author: z.object({
       id: z.string(),
@@ -125,13 +125,13 @@ const posts = defineCollection({
       href: z.string(),
       role: z.string(),
       imageUrl: z.string(),
-      updatedAt: z.date(),
-      createdAt: z.date(),
+      updatedAt: z.coerce.date(),
+      createdAt: z.coerce.date(),
     }),
     content: SerializedEditorStateSchema,
-    updatedAt: z.date(),
-    createdAt: z.date(),
-    publishedAt: z.date(),
+    updatedAt: z.coerce.date(),
+    createdAt: z.coerce.date(),
+    publishedAt: z.coerce.date(),
   }),
 });
 
@@ -150,8 +150,8 @@ const headerCards = defineCollection({
     description: z.string(),
     order: z.number(),
     icon: z.string(),
-    updatedAt: z.date(),
-    createdAt: z.date(),
+    updatedAt: z.coerce.date(),
+    createdAt: z.coerce.date(),
   }),
 });
 
@@ -169,8 +169,8 @@ const headerMenuItems = defineCollection({
     name: z.string(),
     link: z.string(),
     order: z.number(),
-    updatedAt: z.date(),
-    createdAt: z.date(),
+    updatedAt: z.coerce.date(),
+    createdAt: z.coerce.date(),
   }),
 });
 
@@ -189,8 +189,8 @@ const footerSocialMediaIcons = defineCollection({
     icon: z.string(),
     link: z.string(),
     order: z.number(),
-    updatedAt: z.date(),
-    createdAt: z.date(),
+    updatedAt: z.coerce.date(),
+    createdAt: z.coerce.date(),
   }),
 });
 
@@ -208,8 +208,8 @@ const footerMenuItems = defineCollection({
     name: z.string(),
     link: z.string(),
     order: z.number(),
-    updatedAt: z.date(),
-    createdAt: z.date(),
+    updatedAt: z.coerce.date(),
+    createdAt: z.coerce.date(),
   }),
 });
 
@@ -226,8 +226,8 @@ const categories = defineCollection({
     id: z.string(),
     title: z.string(),
     slug: z.string(),
-    updatedAt: z.date(),
-    createdAt: z.date(),
+    updatedAt: z.coerce.date(),
+    createdAt: z.coerce.date(),
   }),
 });
 
@@ -245,10 +245,12 @@ const authors = defineCollection({
     name: z.string(),
     slug: z.string(),
     href: z.string(),
-    updatedAt: z.date(),
-    createdAt: z.date(),
+    role: z.string(),
+    imageUrl: z.string(),
+    updatedAt: z.coerce.date(),
+    createdAt: z.coerce.date(),
   }),
 });
 
 // 4. Export a single `collections` object to register your collection(s)
-export const collections = { posts, headerCards, headerMenuItems, footerSocialMediaIcons, footerMenuItems, categories };
+export const collections = { posts, headerCards, headerMenuItems, footerSocialMediaIcons, footerMenuItems, categories, authors };
