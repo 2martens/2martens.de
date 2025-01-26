@@ -7,7 +7,7 @@ export interface Post {
   title: string;
   slug: string;
   description: string;
-  categories: string[];
+  category: string;
   content: any;
   updatedAt: string;
   createdAt: string;
@@ -60,7 +60,7 @@ const posts = defineCollection({
     title: z.string(),
     slug: z.string(),
     description: z.string(),
-    categories: z.array(z.string()),
+    category: z.string().nullable(),
     content: SerializedEditorStateSchema,
     updatedAt: z.string(),
     createdAt: z.string(),
