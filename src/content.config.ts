@@ -27,7 +27,6 @@ export interface HeaderMenuItem {
   id: string;
   name: string;
   link: string;
-  description: string;
   order: number;
   updatedAt: string;
   createdAt: string;
@@ -37,6 +36,15 @@ export interface FooterSocialMediaIcon {
   id: string;
   name: string;
   icon: string;
+  link: string;
+  order: number;
+  updatedAt: string;
+  createdAt: string;
+}
+
+export interface FooterMenuItem {
+  id: string;
+  name: string;
   link: string;
   order: number;
   updatedAt: string;
@@ -120,7 +128,6 @@ const headerMenuItems = defineCollection({
     id: z.string(),
     name: z.string(),
     link: z.string(),
-    description: z.string(),
     order: z.number(),
     updatedAt: z.string(),
     createdAt: z.string(),
@@ -147,5 +154,24 @@ const footerSocialMediaIcons = defineCollection({
   }),
 });
 
+const footerMenuItems = defineCollection({
+  loader: async () => {
+    const response = await fetch("http://localhost:3000/api/footer-menu-items");
+    const data = await response.json();
+    // Must return an array of entries with an id property, or an object with IDs as keys and entries as values
+    return data.docs.map((item: FooterMenuItem) => ({
+      ...item,
+    }));
+  },
+  schema: z.object({
+    id: z.string(),
+    name: z.string(),
+    link: z.string(),
+    order: z.number(),
+    updatedAt: z.string(),
+    createdAt: z.string(),
+  }),
+});
+
 // 4. Export a single `collections` object to register your collection(s)
-export const collections = { posts, headerCards, headerMenuItems, footerSocialMediaIcons };
+export const collections = { posts, headerCards, headerMenuItems, footerSocialMediaIcons, footerMenuItems };

@@ -26,6 +26,9 @@ headerMenuItems.sort((a, b) => a.data.order - b.data.order)
 
 const footerSocialMediaIcons = await getCollection('footerSocialMediaIcons');
 footerSocialMediaIcons.sort((a, b) => a.data.order - b.data.order)
+
+const footerMenuItems = await getCollection('footerMenuItems');
+footerMenuItems.sort((a, b) => a.data.order - b.data.order)
 ---
 
 <Layout
@@ -35,5 +38,5 @@ footerSocialMediaIcons.sort((a, b) => a.data.order - b.data.order)
 >
   <Header appName="2martens.de" menuItems={headerMenuItems} client:load />
   <Post post={post} />
-  <Footer socialMediaIcons={footerSocialMediaIcons} />
+  <Footer footerMenuItems={footerMenuItems} socialMediaIcons={footerSocialMediaIcons} />
 </Layout>
