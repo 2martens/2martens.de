@@ -29,7 +29,7 @@ export default function Header({ appName, menuItems }: { appName: string, menuIt
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
           >
             <span className="sr-only">Open main menu</span>
-            <FontAwesomeIcon icon={byPrefixAndName.fas["bars"]} aria-hidden="true"  className="size-6" />
+            <FontAwesomeIcon icon={byPrefixAndName.fas["bars"]} aria-hidden="true" className="size-6" />
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">

@@ -3,6 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import Post from "../../components/Post";
 import { getCollection, type CollectionEntry } from "astro:content";
 import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 interface Props {
   post: CollectionEntry<"posts">;
@@ -19,8 +20,12 @@ export async function getStaticPaths() {
 
 // 2. For your template, you can get the entry directly from the prop
 const { post } = Astro.props;
+
 const headerMenuItems = await getCollection("headerMenuItems");
 headerMenuItems.sort((a, b) => a.data.order - b.data.order)
+
+const footerSocialMediaIcons = await getCollection('footerSocialMediaIcons');
+footerSocialMediaIcons.sort((a, b) => a.data.order - b.data.order)
 ---
 
 <Layout
@@ -30,4 +35,5 @@ headerMenuItems.sort((a, b) => a.data.order - b.data.order)
 >
   <Header appName="2martens.de" menuItems={headerMenuItems} client:load />
   <Post post={post} />
+  <Footer socialMediaIcons={footerSocialMediaIcons} />
 </Layout>

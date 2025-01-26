@@ -33,6 +33,16 @@ export interface HeaderMenuItem {
   createdAt: string;
 }
 
+export interface FooterSocialMediaIcon {
+  id: string;
+  name: string;
+  icon: string;
+  link: string;
+  order: number;
+  updatedAt: string;
+  createdAt: string;
+}
+
 // Define Lexical RichText schema
 const LexicalNodeSchema = z.object({
   type: z.string(),
@@ -117,5 +127,25 @@ const headerMenuItems = defineCollection({
   }),
 });
 
+const footerSocialMediaIcons = defineCollection({
+  loader: async () => {
+    const response = await fetch("http://localhost:3000/api/footer-social-media-icons");
+    const data = await response.json();
+    // Must return an array of entries with an id property, or an object with IDs as keys and entries as values
+    return data.docs.map((item: FooterSocialMediaIcon) => ({
+      ...item,
+    }));
+  },
+  schema: z.object({
+    id: z.string(),
+    name: z.string(),
+    icon: z.string(),
+    link: z.string(),
+    order: z.number(),
+    updatedAt: z.string(),
+    createdAt: z.string(),
+  }),
+});
+
 // 4. Export a single `collections` object to register your collection(s)
-export const collections = { posts, headerCards, headerMenuItems };
+export const collections = { posts, headerCards, headerMenuItems, footerSocialMediaIcons };
