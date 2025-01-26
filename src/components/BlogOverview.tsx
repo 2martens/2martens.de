@@ -18,20 +18,22 @@ export default function BlogOverview({posts, basehref}: {posts: CollectionEntry<
               key={post.id}
               className="flex max-w-xl flex-col items-start justify-between"
             >
-              {/* <div className="flex items-center gap-x-4 text-xs">
-                <time dateTime={post.datetime} className="text-gray-500">
-                  {post.date}
+              <div className="flex items-center gap-x-4 text-xs">
+                <time dateTime={post.data.publishedAt} className="text-gray-500">
+                  {new Date(post.data.publishedAt).toLocaleDateString()}
                 </time>
-                <a
-                  href={post.category.href}
-                  className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
-                >
-                  {post.category.title}
-                </a>
-              </div> */}
+                {post.data.category && (
+                  <a
+                    href={post.data.category.href}
+                    className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
+                  >
+                    {post.data.category.title}
+                  </a>
+                )}
+              </div>
               <div className="group relative">
                 <h3 className="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
-                  <a href={`${basehref}/${post.data.slug}`} data-astro-prefetch>
+                  <a href={`${basehref}/${post.data.category.slug}/${post.data.slug}`} data-astro-prefetch>
                     <span className="absolute inset-0" />
                     {post.data.title}
                   </a>
@@ -40,22 +42,22 @@ export default function BlogOverview({posts, basehref}: {posts: CollectionEntry<
                   {post.data.description}
                 </p>
               </div>
-              {/* <div className="relative mt-8 flex items-center gap-x-4">
+              <div className="relative mt-8 flex items-center gap-x-4">
                 <img
                   alt=""
-                  src={post.author.imageUrl}
+                  src={post.data.author.imageUrl}
                   className="size-10 rounded-full bg-gray-50"
                 />
                 <div className="text-sm/6">
                   <p className="font-semibold text-gray-900">
-                    <a href={post.author.href}>
+                    <a href={post.data.author.href}>
                       <span className="absolute inset-0" />
-                      {post.author.name}
+                      {post.data.author.name}
                     </a>
                   </p>
-                  <p className="text-gray-600">{post.author.role}</p>
+                  <p className="text-gray-600">{post.data.author.role}</p>
                 </div>
-              </div> */}
+              </div>
             </article>
           ))}
         </div>

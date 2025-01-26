@@ -1,9 +1,9 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import Post from "../../components/Post";
+import Layout from "../../../layouts/Layout.astro";
+import Post from "../../../components/Post";
 import { getCollection, type CollectionEntry } from "astro:content";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
+import Header from "../../../components/Header";
+import Footer from "../../../components/Footer";
 
 interface Props {
   post: CollectionEntry<"posts">;
@@ -13,7 +13,7 @@ interface Props {
 export async function getStaticPaths() {
   const posts = await getCollection("posts");
   return posts.map((post) => ({
-    params: { slug: post.data.slug },
+    params: { category: post.data.category.slug, slug: post.data.slug },
     props: { post },
   }));
 }

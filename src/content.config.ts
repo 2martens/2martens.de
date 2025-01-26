@@ -8,9 +8,11 @@ export interface Post {
   slug: string;
   description: string;
   category: string;
+  author: string;
   content: any;
-  updatedAt: string;
-  createdAt: string;
+  updatedAt: Date;
+  createdAt: Date;
+  publishedAt: Date;
 }
 
 export interface HeaderCard {
@@ -19,8 +21,8 @@ export interface HeaderCard {
   description: string;
   order: number;
   icon: string;
-  updatedAt: string;
-  createdAt: string;
+  updatedAt: Date;
+  createdAt: Date;
 }
 
 export interface HeaderMenuItem {
@@ -28,8 +30,8 @@ export interface HeaderMenuItem {
   name: string;
   link: string;
   order: number;
-  updatedAt: string;
-  createdAt: string;
+  updatedAt: Date;
+  createdAt: Date;
 }
 
 export interface FooterSocialMediaIcon {
@@ -38,8 +40,8 @@ export interface FooterSocialMediaIcon {
   icon: string;
   link: string;
   order: number;
-  updatedAt: string;
-  createdAt: string;
+  updatedAt: Date;
+  createdAt: Date;
 }
 
 export interface FooterMenuItem {
@@ -47,8 +49,28 @@ export interface FooterMenuItem {
   name: string;
   link: string;
   order: number;
-  updatedAt: string;
-  createdAt: string;
+  updatedAt: Date;
+  createdAt: Date;
+}
+
+export interface Category {
+  id: string;
+  title: string;
+  slug: string;
+  href: string;
+  updatedAt: Date;
+  createdAt: Date;
+}
+
+export interface Author {
+  id: string;
+  name: string;
+  slug: string;
+  href: string;
+  role: string;
+  imageUrl: string;
+  updatedAt: Date;
+  createdAt: Date;
 }
 
 // Define Lexical RichText schema
@@ -88,10 +110,28 @@ const posts = defineCollection({
     title: z.string(),
     slug: z.string(),
     description: z.string(),
-    category: z.string().nullable(),
+    category: z.object({
+      id: z.string(),
+      title: z.string(),
+      slug: z.string(),
+      href: z.string(),
+      updatedAt: z.date(),
+      createdAt: z.date(),
+    }),
+    author: z.object({
+      id: z.string(),
+      name: z.string(),
+      slug: z.string(),
+      href: z.string(),
+      role: z.string(),
+      imageUrl: z.string(),
+      updatedAt: z.date(),
+      createdAt: z.date(),
+    }),
     content: SerializedEditorStateSchema,
-    updatedAt: z.string(),
-    createdAt: z.string(),
+    updatedAt: z.date(),
+    createdAt: z.date(),
+    publishedAt: z.date(),
   }),
 });
 
@@ -110,8 +150,8 @@ const headerCards = defineCollection({
     description: z.string(),
     order: z.number(),
     icon: z.string(),
-    updatedAt: z.string(),
-    createdAt: z.string(),
+    updatedAt: z.date(),
+    createdAt: z.date(),
   }),
 });
 
@@ -129,8 +169,8 @@ const headerMenuItems = defineCollection({
     name: z.string(),
     link: z.string(),
     order: z.number(),
-    updatedAt: z.string(),
-    createdAt: z.string(),
+    updatedAt: z.date(),
+    createdAt: z.date(),
   }),
 });
 
@@ -149,8 +189,8 @@ const footerSocialMediaIcons = defineCollection({
     icon: z.string(),
     link: z.string(),
     order: z.number(),
-    updatedAt: z.string(),
-    createdAt: z.string(),
+    updatedAt: z.date(),
+    createdAt: z.date(),
   }),
 });
 
@@ -168,10 +208,47 @@ const footerMenuItems = defineCollection({
     name: z.string(),
     link: z.string(),
     order: z.number(),
-    updatedAt: z.string(),
-    createdAt: z.string(),
+    updatedAt: z.date(),
+    createdAt: z.date(),
+  }),
+});
+
+const categories = defineCollection({
+  loader: async () => {
+    const response = await fetch("http://localhost:3000/api/categories");
+    const data = await response.json();
+    // Must return an array of entries with an id property, or an object with IDs as keys and entries as values
+    return data.docs.map((item: Category) => ({
+      ...item,
+    }));
+  },
+  schema: z.object({
+    id: z.string(),
+    title: z.string(),
+    slug: z.string(),
+    updatedAt: z.date(),
+    createdAt: z.date(),
+  }),
+});
+
+const authors = defineCollection({
+  loader: async () => {
+    const response = await fetch("http://localhost:3000/api/authors");
+    const data = await response.json();
+    // Must return an array of entries with an id property, or an object with IDs as keys and entries as values
+    return data.docs.map((item: Author) => ({
+      ...item,
+    }));
+  },
+  schema: z.object({
+    id: z.string(),
+    name: z.string(),
+    slug: z.string(),
+    href: z.string(),
+    updatedAt: z.date(),
+    createdAt: z.date(),
   }),
 });
 
 // 4. Export a single `collections` object to register your collection(s)
-export const collections = { posts, headerCards, headerMenuItems, footerSocialMediaIcons, footerMenuItems };
+export const collections = { posts, headerCards, headerMenuItems, footerSocialMediaIcons, footerMenuItems, categories };
