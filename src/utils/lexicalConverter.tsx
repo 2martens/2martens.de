@@ -8,22 +8,8 @@ const jsxConverters: JSXConvertersFunction = ({ defaultConverters }) => ({
   blocks: {},
 })
 
-function LexicalToJSX({ data }: { data: SerializedEditorState }) {
-  // Ensure data is populated and has the correct structure
-  if (!data || !data.root) {
-    return null;
-  }
-
-  return (
-    <RichText 
-      data={data} 
-      converters={jsxConverters}
-    />
-  );
-}
-
 // Utility function to safely render rich text
-export function renderRichText(content: SerializedEditorState) {
+export function renderRichText(content: SerializedEditorState, className: string) {
   // Validate the content using Zod schema
   const validationResult = SerializedEditorStateSchema.safeParse(content);
   
@@ -35,8 +21,10 @@ export function renderRichText(content: SerializedEditorState) {
   if (!content) return null;
   
   return (
-    <div className="rich-text-content">
-      <LexicalToJSX data={content} />
-    </div>
+    <RichText 
+      className={className}
+      data={content} 
+      converters={jsxConverters}
+    />
   );
 }
