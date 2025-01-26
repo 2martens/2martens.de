@@ -1,7 +1,7 @@
 ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.js';
+import Header from '../components/Header.tsx';
 ---
 
 <Layout
@@ -10,7 +10,6 @@ import Header from '../components/Header.js';
 	appName="2martens.de"
 >
 	<Header
-		client:load
 		title="Support center"
 		description="Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat."
 	/>
