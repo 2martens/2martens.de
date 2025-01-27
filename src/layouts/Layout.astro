@@ -1,4 +1,8 @@
 ---
+import { getCollection } from 'astro:content';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
+
 interface Props {
 	appName: string;
 	title: string;
@@ -7,6 +11,15 @@ interface Props {
 }
 
 const { title, author, description, appName } = Astro.props;
+
+const headerMenuItems = await getCollection("headerMenuItems");
+headerMenuItems.sort((a, b) => a.data.order - b.data.order)
+
+const footerSocialMediaIcons = await getCollection('footerSocialMediaIcons');
+footerSocialMediaIcons.sort((a, b) => a.data.order - b.data.order)
+
+const footerMenuItems = await getCollection('footerMenuItems');
+footerMenuItems.sort((a, b) => a.data.order - b.data.order)
 ---
 
 <!doctype html>
@@ -23,7 +36,9 @@ const { title, author, description, appName } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<Header appName="2martens.de" menuItems={headerMenuItems} client:load />
 		<slot />
+		<Footer footerMenuItems={footerMenuItems} socialMediaIcons={footerSocialMediaIcons} />
 	</body>
 </html>
 

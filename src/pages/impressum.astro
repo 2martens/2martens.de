@@ -1,17 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.tsx';
-import { getCollection } from 'astro:content';
-import Footer from '../components/Footer';
 
-const headerMenuItems = await getCollection('headerMenuItems');
-headerMenuItems.sort((a, b) => a.data.order - b.data.order)
-
-const footerSocialMediaIcons = await getCollection('footerSocialMediaIcons');
-footerSocialMediaIcons.sort((a, b) => a.data.order - b.data.order)
-
-const footerMenuItems = await getCollection('footerMenuItems');
-footerMenuItems.sort((a, b) => a.data.order - b.data.order)
 ---
 
 <Layout
@@ -19,7 +8,6 @@ footerMenuItems.sort((a, b) => a.data.order - b.data.order)
     description="2martens.de - The official website of Jim Martens"
     appName="2martens.de"
 >
-    <Header appName="2martens.de" menuItems={headerMenuItems} client:load />
     <div class="bg-white px-6 py-16 lg:px-8">
         <div class="mx-auto max-w-3xl text-base/7 text-gray-700">
 
@@ -66,7 +54,4 @@ footerMenuItems.sort((a, b) => a.data.order - b.data.order)
                 derartige Inhalte umgehend entfernen.</p>
         </div>
     </div>
-    
-
-    <Footer footerMenuItems={footerMenuItems} socialMediaIcons={footerSocialMediaIcons} />
 </Layout>

@@ -1,8 +1,6 @@
 ---
 import { getCollection, type CollectionEntry } from "astro:content";
 import BlogOverview from "../../../components/BlogOverview";
-import Footer from "../../../components/Footer";
-import Header from "../../../components/Header";
 import Layout from "../../../layouts/Layout.astro";
 
 interface Props {
@@ -21,22 +19,11 @@ const posts = await getCollection("posts");
 const {category} = Astro.props;
 posts.sort((a, b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime());
 const filteredPosts = posts.filter((post) => post.data.category.slug === category.data.slug);
-
-const headerMenuItems = await getCollection("headerMenuItems");
-headerMenuItems.sort((a, b) => a.data.order - b.data.order)
-
-const footerSocialMediaIcons = await getCollection('footerSocialMediaIcons');
-footerSocialMediaIcons.sort((a, b) => a.data.order - b.data.order)
-
-const footerMenuItems = await getCollection('footerMenuItems');
-footerMenuItems.sort((a, b) => a.data.order - b.data.order)
 ---
 <Layout
   title="Blog - 2martens.de"
   description="2martens.de - The official website of Jim Martens"
   appName="2martens.de"
 >
-  <Header appName="2martens.de" menuItems={headerMenuItems} client:load />
   <BlogOverview title={category.data.title} description={`Posts in the ${category.data.title} category`} posts={filteredPosts} basehref="/posts" />
-  <Footer footerMenuItems={footerMenuItems} socialMediaIcons={footerSocialMediaIcons} />
 </Layout>
