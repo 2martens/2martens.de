@@ -1,0 +1,26 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+interface Props {
+  author: CollectionEntry<"authors">;
+}
+
+export async function getStaticPaths() {
+  const authors = await getCollection("authors");
+  return authors.map((author) => ({
+    params: { slug: author.data.slug },
+    props: { author },
+  }));
+}
+
+const { author } = Astro.props;
+---
+
+<Layout
+  title={`${author.data.name} - 2martens.de`}
+  description="2martens.de - The official website of Jim Martens"
+  appName="2martens.de"
+>
+  
+</Layout>
