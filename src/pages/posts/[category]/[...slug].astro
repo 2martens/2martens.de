@@ -2,6 +2,7 @@
 import Layout from "../../../layouts/Layout.astro";
 import Post from "../../../components/Post";
 import { getCollection, type CollectionEntry } from "astro:content";
+import { buildPostUrl } from "../../../utils/postUrl";
 
 interface Props {
   post: CollectionEntry<"posts">;
@@ -11,7 +12,7 @@ interface Props {
 export async function getStaticPaths() {
   const posts = await getCollection("posts");
   return posts.map((post) => ({
-    params: { category: post.data.category.slug, slug: post.data.slug },
+    params: { category: post.data.category.slug, slug: buildPostUrl(post) },
     props: { post },
   }));
 }

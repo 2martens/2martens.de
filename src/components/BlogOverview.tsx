@@ -1,4 +1,5 @@
 import type { CollectionEntry } from "astro:content";
+import { buildPostUrl } from "../utils/postUrl";
 
 export default function BlogOverview({title, description, posts, basehref}: {title: string, description: string, posts: CollectionEntry<'posts'>[], basehref: string}): any {
   return (
@@ -20,7 +21,7 @@ export default function BlogOverview({title, description, posts, basehref}: {tit
             >
               <div className="flex items-center gap-x-4 text-xs">
                 <time dateTime={post.data.publishedAt.toString()} className="text-gray-500">
-                  {new Date(post.data.publishedAt).toLocaleDateString()}
+                  {new Date(post.data.publishedAt).toLocaleDateString("de-DE")}
                 </time>
                 {post.data.category && (
                   <a
@@ -33,7 +34,7 @@ export default function BlogOverview({title, description, posts, basehref}: {tit
               </div>
               <div className="group relative">
                 <h3 className="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
-                  <a href={`${basehref}/${post.data.category.slug}/${post.data.slug}`} data-astro-prefetch>
+                  <a href={`${basehref}/${post.data.category.slug}/${buildPostUrl(post)}`} data-astro-prefetch>
                     <span className="absolute inset-0" />
                     {post.data.title}
                   </a>
