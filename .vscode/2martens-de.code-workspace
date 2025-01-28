@@ -8,6 +8,12 @@
         },
         {
             "path": "../../2martens.de"
+        },
+        {
+            "path": "../../keycloakify-starter"
+        },
+        {
+            "path": "../../keycloak-theme"
         }
     ]
 }
