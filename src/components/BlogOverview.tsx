@@ -1,5 +1,6 @@
 import type { CollectionEntry } from "astro:content";
 import { buildPostUrl } from "../utils/postUrl";
+import { buildImageSrc } from "../utils/imageUrl";
 
 export default function BlogOverview({title, description, posts, basehref}: {title: string, description: string, posts: CollectionEntry<'posts'>[], basehref: string}): any {
   return (
@@ -45,8 +46,10 @@ export default function BlogOverview({title, description, posts, basehref}: {tit
               </div>
               <div className="relative mt-8 flex items-center gap-x-4">
                 <img
-                  alt=""
-                  src={post.data.author.imageUrl}
+                  alt={post.data.author.image.alt}
+                  src={buildImageSrc(post.data.author.image.url)}
+                  width={post.data.author.image.width || 72}
+                  height={post.data.author.image.height || 72}
                   className="size-10 rounded-full bg-gray-50"
                 />
                 <div className="text-sm/6">
