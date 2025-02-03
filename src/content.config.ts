@@ -80,16 +80,32 @@ const BaseNodeSchema = z.object({
 
 const HorizontalRuleNodeSchema = BaseNodeSchema.extend({
   type: z.literal("horizontalrule"),
-});
+})
+
+const TextNodeSchema = BaseNodeSchema.extend({
+  detail: z.number(),
+  format: z.number(),
+  mode: z.string(),
+  style: z.string(),
+  text: z.string(),
+  type: z.literal("text"),
+})
+
+const ListItemSchema = BaseNodeSchema.extend({
+  type: z.literal("listitem"),
+  children: z.array(TextNodeSchema).optional(),
+  direction: z.enum(["ltr", "rtl"]).nullable(),
+  format: z.enum(["left", "center", "right", "justify", ""]).optional(),
+  indent: z.number().optional(),
+  checked: z.boolean().optional(),
+  value: z.number().optional(),
+})
 
 const ParagraphNodeSchema = BaseNodeSchema.extend({
   type: z.literal("paragraph"),
-  children: z.array(z.any()).optional(),
+  children: z.array(TextNodeSchema).optional(),
   direction: z.enum(["ltr", "rtl"]).nullable(),
-  text: z.string().optional(),
   format: z.enum(["left", "center", "right", "justify", ""]).optional(),
-  style: z.string().optional(),
-  mode: z.string().optional(),
   textStyle: z.string().optional(),
   textFormat: z.number().optional(),
   indent: z.number().optional(),
@@ -97,7 +113,7 @@ const ParagraphNodeSchema = BaseNodeSchema.extend({
 
 const QuoteNodeSchema = BaseNodeSchema.extend({
   type: z.literal("quote"),
-  children: z.array(z.any()).optional(),
+  children: z.array(TextNodeSchema).optional(),
   direction: z.enum(["ltr", "rtl"]).nullable(),
   format: z.enum(["left", "center", "right", "justify", ""]).optional(),
   indent: z.number().optional(),
@@ -105,7 +121,7 @@ const QuoteNodeSchema = BaseNodeSchema.extend({
 
 const HeadingNodeSchema = BaseNodeSchema.extend({
   type: z.literal("heading"),
-  children: z.array(z.any()).optional(),
+  children: z.array(TextNodeSchema).optional(),
   direction: z.enum(["ltr", "rtl"]).nullable(),
   format: z.enum(["left", "center", "right", "justify", ""]).optional(),
   indent: z.number().optional(),
@@ -114,13 +130,39 @@ const HeadingNodeSchema = BaseNodeSchema.extend({
 
 const ListNodeSchema = BaseNodeSchema.extend({
   type: z.literal("list"),
-  children: z.array(z.any()).optional(),
+  children: z.array(ListItemSchema).optional(),
   direction: z.enum(["ltr", "rtl"]).nullable(),
   format: z.enum(["left", "center", "right", "justify", ""]).optional(),
   indent: z.number().optional(),
-  listBullet: z.string().optional(),
+  listType: z.enum(["number", "check", "bullet"]).optional(),
   start: z.number().optional(),
   tag: z.string().optional(),
+})
+
+const MediaSchema = z.object({
+  id: z.string(),
+  alt: z.string(),
+  updatedAt: z.coerce.date(),
+  createdAt: z.coerce.date(),
+  url: z.string().nullable(),
+  thumbnailURL: z.string().nullable(),
+  filename: z.string().nullable(),
+  mimeType: z.string().nullable(),
+  filesize: z.number().nullable(),
+  width: z.number().nullable(),
+  height: z.number().nullable(),
+  focalX: z.number().nullable(),
+  focalY: z.number().nullable(),
+})
+
+const UploadNodeSchema = BaseNodeSchema.extend({
+  type: z.literal("upload"),
+  format: z.enum(["left", "center", "right", "justify", ""]).optional(),
+  version: z.number(),
+  id: z.string(),
+  fields: z.any().nullable(),
+  relationTo: z.string().nullable(),
+  value: MediaSchema,
 })
 
 const LexicalNodeSchema = z.discriminatedUnion("type", [
@@ -129,6 +171,7 @@ const LexicalNodeSchema = z.discriminatedUnion("type", [
   QuoteNodeSchema,
   ListNodeSchema,
   HeadingNodeSchema,
+  UploadNodeSchema,
 ]);
 
 export const SerializedEditorStateSchema = z.object({
