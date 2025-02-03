@@ -36,7 +36,7 @@ footerMenuItems.sort((a, b) => a.data.order - b.data.order)
 		<title>{title}</title>
 	</head>
 	<body>
-		<Header appName="2martens.de" menuItems={headerMenuItems} client:load />
+		<Header appName={appName} menuItems={headerMenuItems} client:load />
 		<slot />
 		<Footer footerMenuItems={footerMenuItems} socialMediaIcons={footerSocialMediaIcons} />
 	</body>
