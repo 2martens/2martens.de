@@ -73,16 +73,63 @@ export interface Author {
   createdAt: Date;
 }
 
-// Define Lexical RichText schema
-const LexicalNodeSchema = z.object({
-  type: z.string(),
+const BaseNodeSchema = z.object({
   version: z.number(),
+  type: z.string(),
+})
+
+const HorizontalRuleNodeSchema = BaseNodeSchema.extend({
+  type: z.literal("horizontalrule"),
+});
+
+const ParagraphNodeSchema = BaseNodeSchema.extend({
+  type: z.literal("paragraph"),
   children: z.array(z.any()).optional(),
+  direction: z.enum(["ltr", "rtl"]).nullable(),
   text: z.string().optional(),
-  format: z.enum(["left", "center", "right", "justify", ""]),
+  format: z.enum(["left", "center", "right", "justify", ""]).optional(),
   style: z.string().optional(),
   mode: z.string().optional(),
-});
+  textStyle: z.string().optional(),
+  textFormat: z.number().optional(),
+  indent: z.number().optional(),
+})
+
+const QuoteNodeSchema = BaseNodeSchema.extend({
+  type: z.literal("quote"),
+  children: z.array(z.any()).optional(),
+  direction: z.enum(["ltr", "rtl"]).nullable(),
+  format: z.enum(["left", "center", "right", "justify", ""]).optional(),
+  indent: z.number().optional(),
+})
+
+const HeadingNodeSchema = BaseNodeSchema.extend({
+  type: z.literal("heading"),
+  children: z.array(z.any()).optional(),
+  direction: z.enum(["ltr", "rtl"]).nullable(),
+  format: z.enum(["left", "center", "right", "justify", ""]).optional(),
+  indent: z.number().optional(),
+  tag: z.string().optional(),
+})
+
+const ListNodeSchema = BaseNodeSchema.extend({
+  type: z.literal("list"),
+  children: z.array(z.any()).optional(),
+  direction: z.enum(["ltr", "rtl"]).nullable(),
+  format: z.enum(["left", "center", "right", "justify", ""]).optional(),
+  indent: z.number().optional(),
+  listBullet: z.string().optional(),
+  start: z.number().optional(),
+  tag: z.string().optional(),
+})
+
+const LexicalNodeSchema = z.discriminatedUnion("type", [
+  HorizontalRuleNodeSchema,
+  ParagraphNodeSchema,
+  QuoteNodeSchema,
+  ListNodeSchema,
+  HeadingNodeSchema,
+]);
 
 export const SerializedEditorStateSchema = z.object({
   root: z.object({
