@@ -1,3 +1,4 @@
+import { toDateAndTimeString } from "../utils/dateAndTime";
 import { renderRichText } from "../utils/lexicalConverter";
 import { type CollectionEntry } from "astro:content";
 
@@ -15,6 +16,7 @@ export default function Post({ post }: { post: CollectionEntry<"posts"> }) {
         </h1>
         <p className="mt-6 text-xl/8">{post.data.description}</p>
         {renderRichText(post.data.content, "mt-10 max-w-2xl")}
+        <p className="mt-6 text-sm">Last Modified: {toDateAndTimeString(post.data.updatedAt)}</p>
       </article>
     </div>
   );
