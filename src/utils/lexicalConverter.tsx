@@ -10,6 +10,7 @@ import { SerializedEditorStateSchema } from "../content.config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { byPrefixAndName } from "@awesome.me/kit-217da5ee1c/icons";
 import { buildImageSrc } from "./imageUrl";
+import type { SerializedHeadingNode, SerializedListItemNode, SerializedListNode, SerializedQuoteNode, SerializedUploadNode } from "@payloadcms/richtext-lexical";
 
 // Utility function to safely render rich text
 export function renderRichText(
@@ -48,7 +49,7 @@ function horizontalRuleConverter() {
 }
 
 function quoteConverter() {
-  return ({ node }) => (
+  return ({ node }: { node: SerializedQuoteNode }) => (
     <figure className="border-l border-indigo-600 pl-8">
       <blockquote className="text-xl/8 font-semibold tracking-tight text-gray-900">
         {node.children.map((child: SerializedLexicalNode) => (
@@ -60,7 +61,7 @@ function quoteConverter() {
 }
 
 function uploadConverter() {
-  return ({ node }) => (
+  return ({ node }: { node: SerializedUploadNode }) => (
     <img
       width={node.value.width}
       height={node.value.height}
@@ -71,7 +72,7 @@ function uploadConverter() {
 }
 
 function headingConverter() {
-  return ({ node }) => (
+  return ({ node }: { node: SerializedHeadingNode }) => (
     (node.tag === "h1" && (
       <h1 className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
         {node.children.map((child: SerializedLexicalNode) => child.text)}
@@ -101,11 +102,11 @@ function headingConverter() {
       <h6 className="text-base font-semibold tracking-tight text-gray-900">
         {node.children.map((child: SerializedLexicalNode) => child.text)}
       </h6>
-    ));
+    )));
 }
 
 function listConverter() {
-  return ({ node }) => (node.tag === "ul" && node.listType === "check" && (
+  return ({ node }: { node: SerializedListNode }) => (node.tag === "ul" && node.listType === "check" && (
     checkListConverter(node)
   )) ||
     (node.tag === "ul" && node.listType === "bullet" && (
@@ -117,10 +118,10 @@ function listConverter() {
 }
 
 
-function checkListConverter(node) {
+function checkListConverter(node: SerializedListNode) {
   return <ul className="mt-8 max-w-xl space-y-4 text-gray-600" role="list">
-    {node.children.map((child: SerializedLexicalNode) => (
-      <li className="flex gap-x-3" role="listitem">
+    {node.children.filter((child): child is SerializedListItemNode => child.type === 'listitem').map((child, index) => (
+      <li key={index} className="flex gap-x-3" role="listitem">
         {(child.checked && (
           <FontAwesomeIcon
             icon={byPrefixAndName.far["square-check"]}
@@ -143,34 +144,33 @@ function checkListConverter(node) {
   </ul>;
 }
 
-function bulletListConverter(node) {
+function bulletListConverter(node: SerializedListNode) {
   return <ul className="mt-8 max-w-xl space-y-4 text-gray-600" role="list">
-    {node.children.map((child: SerializedLexicalNode) => (
-      <li className="flex gap-x-3" role="listitem">
+    {node.children.filter((child): child is SerializedListItemNode => child.type === 'listitem').map((child, index) => (
+      <li key={index} className="flex gap-x-3" role="listitem">
         <FontAwesomeIcon
           icon={byPrefixAndName.fas["circle-check"]}
           aria-hidden="true"
           className="size-5 flex-none text-indigo-600" />
-        {child.children.map((textNode: SerializedLexicalNode) => (
-          <span>{textNode.text}</span>
+        {child.children.map((textNode: SerializedLexicalNode, textIndex: number) => (
+          <span key={textIndex}>{textNode.text}</span>
         ))}
       </li>
     ))}
   </ul>;
 }
 
-function numberedListConverter(node) {
+function numberedListConverter(node: SerializedListNode) {
   return <ol className="mt-8 max-w-xl space-y-4 text-gray-600" role="list">
-    {node.children.map((child: SerializedLexicalNode) => (
-      <li className="flex gap-x-3" role="listitem">
+    {node.children.filter((child): child is SerializedListItemNode => child.type === 'listitem').map((child, index) => (
+      <li key={index} className="flex gap-x-3" role="listitem">
         <span className="size-5 flex-none text-indigo-600">
-          {child.value}.
+          {(index + 1).toString() + "."}
         </span>
-        {child.children.map((textNode: SerializedLexicalNode) => (
-          <span>{textNode.text}</span>
+        {child.children.map((textNode, textIndex) => (
+          <span key={textIndex}>{textNode.text}</span>
         ))}
       </li>
     ))}
   </ol>;
 }
-
