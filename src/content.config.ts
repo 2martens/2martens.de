@@ -1,6 +1,8 @@
 // 1. Import utilities from `astro:content`
 import { defineCollection, z } from "astro:content";
 
+export const CMS_BASE_URL = "http://localhost:3000";
+
 // Define Post type based on the schema
 export interface Post {
   id: string;
@@ -275,7 +277,7 @@ const speeches = defineCollection({
 
 const headerCards = defineCollection({
   loader: async () => {
-    const response = await fetch("http://localhost:3000/api/header-cards");
+    const response = await fetch(CMS_BASE_URL + "/api/header-cards");
     const data = await response.json();
     // Must return an array of entries with an id property, or an object with IDs as keys and entries as values
     return data.docs.map((card: HeaderCard) => ({
@@ -295,7 +297,7 @@ const headerCards = defineCollection({
 
 const headerMenuItems = defineCollection({
   loader: async () => {
-    const response = await fetch("http://localhost:3000/api/header-menu-items");
+    const response = await fetch(CMS_BASE_URL + "/api/header-menu-items");
     const data = await response.json();
     // Must return an array of entries with an id property, or an object with IDs as keys and entries as values
     return data.docs.map((item: HeaderMenuItem) => ({
@@ -314,7 +316,7 @@ const headerMenuItems = defineCollection({
 
 const footerSocialMediaIcons = defineCollection({
   loader: async () => {
-    const response = await fetch("http://localhost:3000/api/footer-social-media-icons");
+    const response = await fetch(CMS_BASE_URL + "/api/footer-social-media-icons");
     const data = await response.json();
     // Must return an array of entries with an id property, or an object with IDs as keys and entries as values
     return data.docs.map((item: FooterSocialMediaIcon) => ({
@@ -334,7 +336,7 @@ const footerSocialMediaIcons = defineCollection({
 
 const footerMenuItems = defineCollection({
   loader: async () => {
-    const response = await fetch("http://localhost:3000/api/footer-menu-items");
+    const response = await fetch(CMS_BASE_URL + "/api/footer-menu-items");
     const data = await response.json();
     // Must return an array of entries with an id property, or an object with IDs as keys and entries as values
     return data.docs.map((item: FooterMenuItem) => ({
@@ -353,7 +355,7 @@ const footerMenuItems = defineCollection({
 
 const categories = defineCollection({
   loader: async () => {
-    const response = await fetch("http://localhost:3000/api/categories");
+    const response = await fetch(CMS_BASE_URL + "/api/categories");
     const data = await response.json();
     // Must return an array of entries with an id property, or an object with IDs as keys and entries as values
     return data.docs.map((item: Category) => ({
@@ -371,7 +373,7 @@ const categories = defineCollection({
 
 const authors = defineCollection({
   loader: async () => {
-    const response = await fetch("http://localhost:3000/api/authors");
+    const response = await fetch(CMS_BASE_URL + "/api/authors");
     const data = await response.json();
     // Must return an array of entries with an id property, or an object with IDs as keys and entries as values
     return data.docs.map((item: Author) => ({
