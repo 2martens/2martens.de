@@ -36,9 +36,9 @@ export default function BlogOverview({title, description, posts, basehref}: {tit
               <div className="group relative">
                 <h3 className="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
                 {'category' in post.data && post.data.category && (
-                  <a href={post.data.category.href} data-astro-prefetch>
+                  <a href={`${basehref}/${post.data.category.slug}/${buildPostUrl(post)}`} data-astro-prefetch>
                     <span className="absolute inset-0" />
-                    {post.data.category.title}
+                    {post.data.title}
                   </a>
                 ) || (
                   <a href={`${basehref}/${buildPostUrl(post)}`} data-astro-prefetch>
