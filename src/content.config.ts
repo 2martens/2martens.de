@@ -95,6 +95,18 @@ const TextNodeSchema = BaseNodeSchema.extend({
   type: z.literal("text"),
 })
 
+const AutoLinkNodeSchema = BaseNodeSchema.extend({
+  children: z.array(TextNodeSchema).optional(),
+  fields: z.object({
+    linkType: z.string(),
+    url: z.string(),
+  }).nullable(),
+  format: z.enum(["left", "center", "right", "justify", ""]).optional(),
+  indent: z.number().optional(),
+  direction: z.enum(["ltr", "rtl"]).nullable(),
+  type: z.literal("autolink"),
+})
+
 const ListItemSchema = BaseNodeSchema.extend({
   type: z.literal("listitem"),
   children: z.array(TextNodeSchema).optional(),
@@ -107,7 +119,7 @@ const ListItemSchema = BaseNodeSchema.extend({
 
 const ParagraphNodeSchema = BaseNodeSchema.extend({
   type: z.literal("paragraph"),
-  children: z.array(z.union([TextNodeSchema, LineBreakNodeSchema])).optional(),
+  children: z.array(z.union([TextNodeSchema, LineBreakNodeSchema, AutoLinkNodeSchema])).optional(),
   direction: z.enum(["ltr", "rtl"]).nullable(),
   format: z.enum(["left", "center", "right", "justify", ""]).optional(),
   textStyle: z.string().optional(),
