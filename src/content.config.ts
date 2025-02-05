@@ -100,11 +100,12 @@ const AutoLinkNodeSchema = BaseNodeSchema.extend({
   fields: z.object({
     linkType: z.string(),
     url: z.string(),
+    newTab: z.boolean().optional(),
   }).nullable(),
   format: z.enum(["left", "center", "right", "justify", ""]).optional(),
   indent: z.number().optional(),
   direction: z.enum(["ltr", "rtl"]).nullable(),
-  type: z.literal("autolink"),
+  type: z.enum(["autolink", "link"]),
 })
 
 const ListItemSchema = BaseNodeSchema.extend({
