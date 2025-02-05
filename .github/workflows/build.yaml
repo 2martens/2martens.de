@@ -62,7 +62,7 @@ jobs:
             FONTAWESOME_PACKAGE_TOKEN: ${{ secrets.FONTAWESOME_PACKAGE_TOKEN }}
         - name: Build with Astro
           run: |
-            ${{ steps.detect-package-manager.outputs.runner }} run build \
+            ${{ steps.detect-package-manager.outputs.runner }} astro build \
               --site "https://2martens.de" \
               --base "/"
           working-directory: ${{ env.BUILD_PATH }}
