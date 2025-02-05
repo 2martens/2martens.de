@@ -4,6 +4,7 @@ import BlogOverview from "../../components/BlogOverview.js";
 import { getCollection } from "astro:content";
 
 const posts = await getCollection("posts");
+posts.sort((a, b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime());
 ---
 
 <Layout
