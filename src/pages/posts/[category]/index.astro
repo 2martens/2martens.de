@@ -24,6 +24,7 @@ const filteredPosts = posts.filter((post) => post.data.category.slug === categor
   title="Blog - 2martens.de"
   description="2martens.de - The official website of Jim Martens"
   appName="2martens.de"
+  logoTitle="Jim Martens"
 >
   <BlogOverview title={category.data.title} description={`Posts in the ${category.data.title} category`} posts={filteredPosts} basehref="/posts" />
 </Layout>

@@ -6,23 +6,23 @@ import { byPrefixAndName } from '@awesome.me/kit-217da5ee1c/icons'
 import type { CollectionEntry } from 'astro:content'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-export default function Header({ appName, menuItems }: { appName: string, menuItems: CollectionEntry<"headerMenuItems">[] }) {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+export default function Header({
+  logoTitle,
+  menuItems,
+}: {
+  logoTitle: string;
+  menuItems: CollectionEntry<"headerMenuItems">[];
+}) {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <header className="bg-white">
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">{appName}</span>
-            <img
-              alt=""
-              src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-              className="h-8 w-auto"
-            />
-          </a>
-        </div>
-        <div className="flex lg:hidden">
+            <span className="text-sm/6 font-semibold text-gray-900">
+              {logoTitle}
+            </span>
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}

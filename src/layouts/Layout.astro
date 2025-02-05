@@ -5,12 +5,13 @@ import Header from '../components/Header';
 
 interface Props {
 	appName: string;
+	logoTitle: string;
 	title: string;
 	author?: string;
 	description?: string;
 }
 
-const { title, author, description, appName } = Astro.props;
+const { title, author, description, appName, logoTitle } = Astro.props;
 
 const headerMenuItems = await getCollection("headerMenuItems");
 headerMenuItems.sort((a, b) => a.data.order - b.data.order)
@@ -36,7 +37,7 @@ footerMenuItems.sort((a, b) => a.data.order - b.data.order)
 		<title>{title}</title>
 	</head>
 	<body>
-		<Header appName={appName} menuItems={headerMenuItems} client:load />
+		<Header logoTitle={logoTitle} menuItems={headerMenuItems} client:load />
 		<slot />
 		<Footer footerMenuItems={footerMenuItems} socialMediaIcons={footerSocialMediaIcons} />
 	</body>
