@@ -1,10 +1,35 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import ElectionLandingpage from "../components/ElectionLandingpage";
+import Layout from "../layouts/Layout.astro";
+import portrait from "../assets/landingpage-portrait.jpg";
+import { Image } from "astro:assets";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { byPrefixAndName } from "@awesome.me/kit-217da5ee1c/icons";
+
+const portraitAltText = "Ein junger Mann mit kurzem, hellem Haar steht draußen auf einer Wiese. Er trägt ein schwarzes T-Shirt mit der Aufschrift ‘37C3 UNLOCKED’ und eine dunkelgraue Kapuzenjacke. Seine Hände sind in die Hosentaschen gesteckt, und er lächelt leicht in die Kamera. Im Hintergrund sind unscharf Gebäude zu erkennen."
 ---
 
 <Layout
-	title="2martens.de"
-	description="2martens.de - The official website of Jim Martens"
-	appName="2martens.de"
+  title="2martens.de"
+  description="2martens.de - The official website of Jim Martens"
+  appName="2martens.de"
+  logoTitle="Jim Martens"
 >
+  <ElectionLandingpage>
+	<figure 
+	slot="portrait"
+	class="w-full rounded-b-xl ring-1 shadow-xl ring-gray-400/10 lg:-ml-0 lg:w-[40rem]">
+		<Image
+		src={portrait}
+		alt={portraitAltText}
+		class="rounded-t-xl"
+	  />
+	  <figcaption class="text-base/7 text-gray-700 pl-1">
+		<FontAwesomeIcon 
+		icon={byPrefixAndName.far["copyright"]}
+		aria-hidden="true"
+        className="size-4 inline-block align-middle"
+		/>&nbsp;<span class="inline-block align-middle">Henning Angerer</span></figcaption>
+	</figure>
+  </ElectionLandingpage>
 </Layout>
