@@ -225,6 +225,37 @@ const posts = defineCollection({
   }),
 });
 
+const speeches = defineCollection({
+  loader: async () => {
+    const response = await fetch("http://localhost:3000/api/speeches");
+    const data = await response.json();
+    // Must return an array of entries with an id property, or an object with IDs as keys and entries as values
+    return data.docs.map((post: Post) => ({
+      ...post,
+    }));
+  },
+  schema: z.object({
+    id: z.string(),
+    title: z.string(),
+    slug: z.string(),
+    description: z.string(),
+    author: z.object({
+      id: z.string(),
+      name: z.string(),
+      slug: z.string(),
+      href: z.string(),
+      role: z.string(),
+      image: MediaSchema,
+      updatedAt: z.coerce.date(),
+      createdAt: z.coerce.date(),
+    }),
+    content: SerializedEditorStateSchema,
+    updatedAt: z.coerce.date(),
+    createdAt: z.coerce.date(),
+    publishedAt: z.coerce.date(),
+  }),
+});
+
 const headerCards = defineCollection({
   loader: async () => {
     const response = await fetch("http://localhost:3000/api/header-cards");
@@ -343,4 +374,4 @@ const authors = defineCollection({
 });
 
 // 4. Export a single `collections` object to register your collection(s)
-export const collections = { posts, headerCards, headerMenuItems, footerSocialMediaIcons, footerMenuItems, categories, authors };
+export const collections = { posts, speeches, headerCards, headerMenuItems, footerSocialMediaIcons, footerMenuItems, categories, authors };

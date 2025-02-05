@@ -1,0 +1,17 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import BlogOverview from "../../components/BlogOverview.js";
+import { getCollection } from "astro:content";
+
+const speeches = await getCollection("speeches");
+speeches.sort((a, b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime());
+---
+
+<Layout
+  title="Reden - 2martens.de"
+  description="2martens.de - The official website of Jim Martens"
+  appName="2martens.de"
+  logoTitle="Jim Martens"
+>
+  <BlogOverview title="Reden" description="Sammlung von meinen Reden" posts={speeches} basehref="/speeches" />
+</Layout>

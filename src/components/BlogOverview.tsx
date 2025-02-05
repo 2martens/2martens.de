@@ -2,7 +2,7 @@ import type { CollectionEntry } from "astro:content";
 import { buildPostUrl } from "../utils/postUrl";
 import { buildImageSrc } from "../utils/imageUrl";
 
-export default function BlogOverview({title, description, posts, basehref}: {title: string, description: string, posts: CollectionEntry<'posts'>[], basehref: string}): any {
+export default function BlogOverview({title, description, posts, basehref}: {title: string, description: string, posts: CollectionEntry<'posts'>[]|CollectionEntry<'speeches'>[], basehref: string}): any {
   return (
     <div className="bg-white py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -24,7 +24,7 @@ export default function BlogOverview({title, description, posts, basehref}: {tit
                 <time dateTime={post.data.publishedAt.toString()} className="text-gray-500">
                   {new Date(post.data.publishedAt).toLocaleDateString("de-DE")}
                 </time>
-                {post.data.category && (
+                {'category' in post.data && post.data.category && (
                   <a
                     href={post.data.category.href}
                     className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
@@ -35,10 +35,17 @@ export default function BlogOverview({title, description, posts, basehref}: {tit
               </div>
               <div className="group relative">
                 <h3 className="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
-                  <a href={`${basehref}/${post.data.category.slug}/${buildPostUrl(post)}`} data-astro-prefetch>
+                {'category' in post.data && post.data.category && (
+                  <a href={post.data.category.href} data-astro-prefetch>
+                    <span className="absolute inset-0" />
+                    {post.data.category.title}
+                  </a>
+                ) || (
+                  <a href={`${basehref}/${buildPostUrl(post)}`} data-astro-prefetch>
                     <span className="absolute inset-0" />
                     {post.data.title}
                   </a>
+                )}
                 </h3>
                 <p className="mt-5 line-clamp-3 text-sm/6 text-gray-600">
                   {post.data.description}
