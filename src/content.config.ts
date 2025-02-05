@@ -82,6 +82,10 @@ const HorizontalRuleNodeSchema = BaseNodeSchema.extend({
   type: z.literal("horizontalrule"),
 })
 
+const LineBreakNodeSchema = BaseNodeSchema.extend({
+  type: z.literal("linebreak"),
+})
+
 const TextNodeSchema = BaseNodeSchema.extend({
   detail: z.number(),
   format: z.number(),
@@ -103,7 +107,7 @@ const ListItemSchema = BaseNodeSchema.extend({
 
 const ParagraphNodeSchema = BaseNodeSchema.extend({
   type: z.literal("paragraph"),
-  children: z.array(TextNodeSchema).optional(),
+  children: z.array(z.union([TextNodeSchema, LineBreakNodeSchema])).optional(),
   direction: z.enum(["ltr", "rtl"]).nullable(),
   format: z.enum(["left", "center", "right", "justify", ""]).optional(),
   textStyle: z.string().optional(),
