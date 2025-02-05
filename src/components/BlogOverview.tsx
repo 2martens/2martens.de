@@ -2,6 +2,8 @@ import type { CollectionEntry } from "astro:content";
 import { buildPostUrl } from "../utils/postUrl";
 import { buildImageSrc } from "../utils/imageUrl";
 
+const base = import.meta.env.BASE_URL == "/" ? "" : import.meta.env.BASE_URL;
+
 export default function BlogOverview({
   title,
   description,
@@ -37,7 +39,7 @@ export default function BlogOverview({
                 </time>
                 {"category" in post.data && post.data.category && (
                   <a
-                    href={post.data.category.href}
+                    href={base + post.data.category.href}
                     className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
                   >
                     {post.data.category.title}
@@ -48,7 +50,7 @@ export default function BlogOverview({
                 <h3 className="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
                   {("category" in post.data && post.data.category && (
                     <a
-                      href={`${basehref}/${post.data.category.slug}/${buildPostUrl(post)}`}
+                      href={`${base}${basehref}/${post.data.category.slug}/${buildPostUrl(post)}`}
                       data-astro-prefetch
                     >
                       <span className="absolute inset-0" />
@@ -56,7 +58,7 @@ export default function BlogOverview({
                     </a>
                   )) || (
                     <a
-                      href={`${basehref}/${buildPostUrl(post)}`}
+                      href={`${base}${basehref}/${buildPostUrl(post)}`}
                       data-astro-prefetch
                     >
                       <span className="absolute inset-0" />

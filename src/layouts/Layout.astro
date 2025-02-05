@@ -4,6 +4,8 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import '../assets/green.css';
 
+const base = import.meta.env.BASE_URL == "/" ? "" : import.meta.env.BASE_URL;
+
 interface Props {
 	appName: string;
 	logoTitle: string;
@@ -29,7 +31,7 @@ footerMenuItems.sort((a, b) => a.data.order - b.data.order)
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-		<link rel="icon" type="image/jpeg" href="/favicon.jpg" />
+		<link rel="icon" type="image/jpeg" href=`${base}/favicon.jpg` />
 		<!-- basic meta tags -->
 		<meta name="generator" content={Astro.generator} />
 		<meta name="author" content={author} />

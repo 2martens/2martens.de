@@ -6,6 +6,8 @@ import { byPrefixAndName } from "@awesome.me/kit-217da5ee1c/icons";
 import type { CollectionEntry } from "astro:content";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+const base = import.meta.env.BASE_URL == "/" ? "" : import.meta.env.BASE_URL;
+
 export default function Header({
   logoTitle,
   menuItems,
@@ -22,7 +24,7 @@ export default function Header({
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
       >
         <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.5">
+          <a href={base} className="-m-1.5 p-1.5">
             <span className="text-sm/6 font-semibold text-gray-900">
               {logoTitle}
             </span>
@@ -46,7 +48,7 @@ export default function Header({
           {menuItems.map((item) => (
             <a
               key={item.data.name}
-              href={item.data.link}
+              href={base + item.data.link}
               className="text-sm/6 font-semibold text-gray-900"
             >
               {item.data.name}
@@ -63,7 +65,7 @@ export default function Header({
         <div className="fixed inset-0 z-10" />
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="/" className="-m-1.5 p-1.5">
+            <a href={base} className="-m-1.5 p-1.5">
               <span className="text-sm/6 font-semibold text-gray-900">{logoTitle}</span>
             </a>
             <button
@@ -85,7 +87,7 @@ export default function Header({
                 {menuItems.map((item) => (
                   <a
                     key={item.data.name}
-                    href={item.data.link}
+                    href={base + item.data.link}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                   >
                     {item.data.name}

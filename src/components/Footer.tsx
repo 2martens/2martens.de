@@ -2,6 +2,8 @@ import { byPrefixAndName } from "@awesome.me/kit-217da5ee1c/icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { CollectionEntry } from "astro:content";
 
+const base = import.meta.env.BASE_URL == "/" ? "" : import.meta.env.BASE_URL;
+
 export default function FooterWithMenu({
   footerMenuItems,
   socialMediaIcons,
@@ -19,7 +21,7 @@ export default function FooterWithMenu({
           {footerMenuItems.map((item) => (
             <a
               key={item.data.name}
-              href={item.data.link}
+              href={base + item.data.link}
               className="text-gray-600 hover:text-gray-900"
             >
               {item.data.name}
