@@ -66,6 +66,8 @@ jobs:
               --site "https://2martens.de" \
               --base "/"
           working-directory: ${{ env.BUILD_PATH }}
+          env:
+            CMS_BASE_URL: ${{ secrets.CMS_BASE_URL }}
         - name: Upload artifact
           uses: actions/upload-pages-artifact@v3
           with:

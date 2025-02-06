@@ -1,7 +1,7 @@
 // 1. Import utilities from `astro:content`
 import { defineCollection, z } from "astro:content";
 
-export const CMS_BASE_URL = "http://localhost:3000";
+export const CMS_BASE_URL = import.meta.env.CMS_BASE_URL || "http://localhost:3000";
 
 // Define Post type based on the schema
 export interface Post {
