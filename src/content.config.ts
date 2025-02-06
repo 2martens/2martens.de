@@ -8,6 +8,7 @@ export interface Post {
   id: string;
   title: string;
   slug: string;
+  visible: boolean;
   description: string;
   category: string;
   author: string;
@@ -218,6 +219,7 @@ const posts = defineCollection({
     id: z.string(),
     title: z.string(),
     slug: z.string(),
+    visible: z.boolean(),
     description: z.string(),
     category: z.object({
       id: z.string(),
