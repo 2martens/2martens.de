@@ -34,7 +34,7 @@ export const positions: Position[] = [
   {
     name: "Tarifreform umsetzen",
     description:
-      "Der Zeitkartentarif ist bereits deutlich übersichtlicher: nur noch Deutschlandticket. Nun muss beim Gelegenheits- bzw. Bartarif auch noch entrümpelt werden. Konkret möchte die Zahlgrenzen loswerden.",
+      "Der Zeitkartentarif ist bereits deutlich übersichtlicher: nur noch Deutschlandticket. Nun muss beim Gelegenheits- bzw. Bartarif auch noch entrümpelt werden. Konkret möchte ich die Zahlgrenzen loswerden.",
     icon: byPrefixAndName.far["ticket"],
   },
 ];
