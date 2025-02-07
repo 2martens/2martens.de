@@ -8,13 +8,9 @@ on:
   schedule:
     - cron: '30 2 * * *'
   workflow_dispatch:
-    
-permissions:
-  contents: read
-  id-token: write
 
 concurrency:
-  group: "pages"
+  group: "site"
   cancel-in-progress: false
 
 env:
@@ -52,9 +48,6 @@ jobs:
             node-version: "20"
             cache: ${{ steps.detect-package-manager.outputs.manager }}
             cache-dependency-path: ${{ env.BUILD_PATH }}/${{ steps.detect-package-manager.outputs.lockfile }}
-        - name: Setup Pages
-          id: pages
-          uses: actions/configure-pages@v5
         - name: Install dependencies
           run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
           working-directory: ${{ env.BUILD_PATH }}
@@ -68,18 +61,25 @@ jobs:
           working-directory: ${{ env.BUILD_PATH }}
           env:
             CMS_BASE_URL: ${{ secrets.CMS_BASE_URL }}
-        - name: Upload artifact
-          uses: actions/upload-pages-artifact@v3
+        - name: Push site to Uberspace
+          uses: easingthemes/ssh-deploy@main
           with:
-            path: ${{ env.BUILD_PATH }}/dist
+              SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+              ARGS: "-rvz -i --delete"
+              SOURCE: "dist/"
+              REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+              REMOTE_USER: ${{ secrets.REMOTE_USER }}
+              TARGET: /var/www/virtual/${{ secrets.REMOTE_USER }}/2martens.de-new/
+              EXCLUDE: "/dist/, /node_modules/"
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     needs: build
     runs-on: ubuntu-latest
-    name: Deploy
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Deploy site on Uberspace
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.PORT }}
+          script: ~/bin/updateRelaunch.sh
