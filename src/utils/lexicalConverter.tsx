@@ -6,7 +6,7 @@ import type {
   SerializedEditorState,
   SerializedLexicalNode,
 } from "@payloadcms/richtext-lexical/lexical";
-import { SerializedEditorStateSchema } from "../content.config";
+import { SerializedEditorStateSchema } from "../types/schemas";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { byPrefixAndName } from "@awesome.me/kit-217da5ee1c/icons";
 import { buildImageSrc } from "./imageUrl";
