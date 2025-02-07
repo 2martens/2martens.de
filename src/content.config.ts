@@ -204,7 +204,11 @@ const categories = defineCollection({
 
 const authors = defineCollection({
   loader: async () => {
-    const response = await fetch(CMS_BASE_URL + "/api/authors");
+    const response = await fetch(CMS_BASE_URL + "/api/authors", {
+      headers: {
+        Authorization: `clients API-Key ${CMS_API_KEY}`,
+      },
+    });
     const data = await response.json();
     // Must return an array of entries with an id property, or an object with IDs as keys and entries as values
     return data.docs.map((item: Author) => ({
