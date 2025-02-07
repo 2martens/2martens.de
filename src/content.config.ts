@@ -3,7 +3,7 @@ import { defineCollection, z } from "astro:content";
 import type { Post, HeaderCard, HeaderMenuItem, FooterSocialMediaIcon, FooterMenuItem, Category, Author } from "./types/collections";
 import { MediaSchema, SerializedEditorStateSchema } from "./types/schemas";
 
-const CMS_BASE_URL = import.meta.env.CMS_BASE_URL || "http://localhost:3000";
+export const CMS_BASE_URL = import.meta.env.CMS_BASE_URL || "http://localhost:3000";
 const CMS_API_KEY = import.meta.env.CMS_API_KEY || "";
 
 // 3. Define your collection(s)
