@@ -12,7 +12,7 @@ export default function FooterWithMenu({
   socialMediaIcons: CollectionEntry<"footerSocialMediaIcons">[];
 }) {
   return (
-    <footer className="bg-white">
+    <footer className="bg-white bottom-0 left-0 right-0">
       <div className="mx-auto max-w-7xl overflow-hidden px-6 py-10 sm:py-14 lg:px-8">
         <nav
           aria-label="Footer"
@@ -22,7 +22,7 @@ export default function FooterWithMenu({
             <a
               key={item.data.name}
               href={base + item.data.link}
-              className="text-gray-600 hover:text-gray-900"
+              className="text-gray-900 hover:text-gray-700"
             >
               {item.data.name}
             </a>
@@ -33,7 +33,7 @@ export default function FooterWithMenu({
             <a
               key={item.data.name}
               href={item.data.link}
-              className="text-gray-600 hover:text-gray-800"
+              className="text-gray-900 hover:text-gray-700"
             >
               <span className="sr-only">{item.data.name}</span>
               <FontAwesomeIcon

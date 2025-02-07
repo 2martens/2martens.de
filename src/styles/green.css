@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+  --font-main: ui-sans-serif, system-ui, sans-serif, "PT Sans";
+  --color-light-green: rgb(108, 205, 135);
+  --color-dark-green: rgb(26, 132, 68);
+  --color-grashalm: rgb(138, 189, 36);
+  --color-highlight: rgb(255, 241, 122);
+  --color-klee: rgb(0, 137, 57);
+  --color-sand: rgb(245, 241, 233);
+  --color-yellow: rgb(255, 255, 0);
+}
+
+@layer base {
+  html {
+    font-family: var(--font-main);
+  }
+  body {
+    @apply bg-dark-green;
+  }
+}

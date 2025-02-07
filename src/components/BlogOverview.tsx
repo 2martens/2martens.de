@@ -16,13 +16,13 @@ export default function BlogOverview({
   basehref: string;
 }): any {
   return (
-    <div className="bg-white py-16 sm:py-24">
+    <div className="py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
+          <h2 className="text-4xl font-semibold tracking-tight text-pretty text-yellow sm:text-5xl">
             {title}
           </h2>
-          <p className="mt-2 text-lg/8 text-gray-600">{description}</p>
+          <p className="mt-2 text-lg/8 text-sand">{description}</p>
         </div>
         <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {posts.map((post) => (
@@ -33,7 +33,7 @@ export default function BlogOverview({
               <div className="flex items-center gap-x-4 text-xs">
                 <time
                   dateTime={post.data.publishedAt.toString()}
-                  className="text-gray-500"
+                  className="text-sand"
                 >
                   {new Date(post.data.publishedAt).toLocaleDateString("de-DE")}
                 </time>
@@ -47,7 +47,7 @@ export default function BlogOverview({
                 )}
               </div>
               <div className="relative group">
-                <h3 className="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
+                <h3 className="mt-3 text-lg/6 font-semibold text-yellow group-hover:text-yellow-300">
                   {("category" in post.data && post.data.category && (
                     <a
                       href={`${base}${basehref}/${post.data.category.slug}/${buildPostUrl(post)}`}
@@ -66,7 +66,7 @@ export default function BlogOverview({
                     </a>
                   )}
                 </h3>
-                <p className="h-auto mt-5 line-clamp-3 text-sm/6 text-gray-600">
+                <p className="h-auto mt-5 line-clamp-3 text-sm/6 text-sand">
                   {post.data.description}
                 </p>
               </div>
@@ -79,13 +79,13 @@ export default function BlogOverview({
                   className="size-10 rounded-full bg-gray-50"
                 />
                 <div className="text-sm/6">
-                  <p className="font-semibold text-gray-900">
+                  <p className="font-semibold text-sand">
                     <a href={post.data.author.href}>
                       <span className="absolute inset-0" />
                       {post.data.author.name}
                     </a>
                   </p>
-                  <p className="text-gray-600">{post.data.author.role}</p>
+                  <p className="text-sand">{post.data.author.role}</p>
                 </div>
               </div>
             </article>

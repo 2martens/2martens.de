@@ -1,11 +1,10 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
-import tailwind from '@astrojs/tailwind';
+import react from "@astrojs/react";
 
-import react from '@astrojs/react';
-
-import sitemap from '@astrojs/sitemap';
+import sitemap from "@astrojs/sitemap";
+import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,10 +12,11 @@ export default defineConfig({
   site: "https://2martens.de",
   trailingSlash: "never",
   prefetch: true,
-  integrations: [tailwind(), react(), sitemap()],
+  integrations: [react(), sitemap()],
   vite: {
+    plugins: [tailwindcss()],
     ssr: {
-      noExternal: ['@payloadcms/richtext-lexical']
-    }
-  }
+      noExternal: ["@payloadcms/richtext-lexical"],
+    },
+  },
 });

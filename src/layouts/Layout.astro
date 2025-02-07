@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import '../assets/green.css';
+import '../styles/green.css';
 
 const base = import.meta.env.BASE_URL == "/" ? "" : import.meta.env.BASE_URL;
 
@@ -40,10 +40,10 @@ footerMenuItems.sort((a, b) => a.data.order - b.data.order)
 		<link rel="sitemap" href="/sitemap-index.xml" />
 		<title>{title}</title>
 	</head>
-	<body>
-		<Header logoTitle={logoTitle} menuItems={headerMenuItems} client:load />
-		<slot />
-		<Footer footerMenuItems={footerMenuItems} socialMediaIcons={footerSocialMediaIcons} />
+	<body class="flex flex-col">
+		<div class="flex-none"><Header logoTitle={logoTitle} menuItems={headerMenuItems} client:load /></div>
+		<div class="grow"><slot /></div>
+		<div class="flex-none"><Footer footerMenuItems={footerMenuItems} socialMediaIcons={footerSocialMediaIcons} /></div>
 	</body>
 </html>
 
