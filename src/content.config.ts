@@ -2,6 +2,7 @@
 import { defineCollection, z } from "astro:content";
 
 export const CMS_BASE_URL = import.meta.env.CMS_BASE_URL || "http://localhost:3000";
+const CMS_API_KEY = import.meta.env.CMS_API_KEY || "";
 
 // Define Post type based on the schema
 export interface Post {
@@ -208,7 +209,11 @@ export const SerializedEditorStateSchema = z.object({
 // 3. Define your collection(s)
 const posts = defineCollection({
   loader: async () => {
-    const response = await fetch("http://localhost:3000/api/posts");
+    const response = await fetch(CMS_BASE_URL + "/api/posts", {
+      headers: {
+        Authorization: `clients API-Key ${CMS_API_KEY}`,
+      },
+    });
     const data = await response.json();
     // Must return an array of entries with an id property, or an object with IDs as keys and entries as values
     return data.docs.map((post: Post) => ({
@@ -248,7 +253,11 @@ const posts = defineCollection({
 
 const speeches = defineCollection({
   loader: async () => {
-    const response = await fetch("http://localhost:3000/api/speeches");
+    const response = await fetch(CMS_BASE_URL + "/api/speeches", {
+      headers: {
+        Authorization: `clients API-Key ${CMS_API_KEY}`,
+      },
+    });
     const data = await response.json();
     // Must return an array of entries with an id property, or an object with IDs as keys and entries as values
     return data.docs.map((post: Post) => ({
@@ -279,7 +288,11 @@ const speeches = defineCollection({
 
 const headerCards = defineCollection({
   loader: async () => {
-    const response = await fetch(CMS_BASE_URL + "/api/header-cards");
+    const response = await fetch(CMS_BASE_URL + "/api/header-cards", {
+      headers: {
+        Authorization: `clients API-Key ${CMS_API_KEY}`,
+      },
+    });
     const data = await response.json();
     // Must return an array of entries with an id property, or an object with IDs as keys and entries as values
     return data.docs.map((card: HeaderCard) => ({
@@ -299,7 +312,11 @@ const headerCards = defineCollection({
 
 const headerMenuItems = defineCollection({
   loader: async () => {
-    const response = await fetch(CMS_BASE_URL + "/api/header-menu-items");
+    const response = await fetch(CMS_BASE_URL + "/api/header-menu-items", {
+      headers: {
+        Authorization: `clients API-Key ${CMS_API_KEY}`,
+      },
+    });
     const data = await response.json();
     // Must return an array of entries with an id property, or an object with IDs as keys and entries as values
     return data.docs.map((item: HeaderMenuItem) => ({
@@ -318,7 +335,11 @@ const headerMenuItems = defineCollection({
 
 const footerSocialMediaIcons = defineCollection({
   loader: async () => {
-    const response = await fetch(CMS_BASE_URL + "/api/footer-social-media-icons");
+    const response = await fetch(CMS_BASE_URL + "/api/footer-social-media-icons", {
+      headers: {
+        Authorization: `clients API-Key ${CMS_API_KEY}`,
+      },
+    });
     const data = await response.json();
     // Must return an array of entries with an id property, or an object with IDs as keys and entries as values
     return data.docs.map((item: FooterSocialMediaIcon) => ({
@@ -338,7 +359,11 @@ const footerSocialMediaIcons = defineCollection({
 
 const footerMenuItems = defineCollection({
   loader: async () => {
-    const response = await fetch(CMS_BASE_URL + "/api/footer-menu-items");
+    const response = await fetch(CMS_BASE_URL + "/api/footer-menu-items", {
+      headers: {
+        Authorization: `clients API-Key ${CMS_API_KEY}`,
+      },
+    });
     const data = await response.json();
     // Must return an array of entries with an id property, or an object with IDs as keys and entries as values
     return data.docs.map((item: FooterMenuItem) => ({
@@ -357,7 +382,11 @@ const footerMenuItems = defineCollection({
 
 const categories = defineCollection({
   loader: async () => {
-    const response = await fetch(CMS_BASE_URL + "/api/categories");
+    const response = await fetch(CMS_BASE_URL + "/api/categories", {
+      headers: {
+        Authorization: `clients API-Key ${CMS_API_KEY}`,
+      },
+    });
     const data = await response.json();
     // Must return an array of entries with an id property, or an object with IDs as keys and entries as values
     return data.docs.map((item: Category) => ({

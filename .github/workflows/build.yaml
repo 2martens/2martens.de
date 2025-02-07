@@ -61,6 +61,7 @@ jobs:
           working-directory: ${{ env.BUILD_PATH }}
           env:
             CMS_BASE_URL: ${{ secrets.CMS_BASE_URL }}
+            CMS_API_KEY: ${{ secrets.CMS_API_KEY }}
         - name: Push site to Uberspace
           uses: easingthemes/ssh-deploy@main
           with:
