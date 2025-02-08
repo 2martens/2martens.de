@@ -80,10 +80,8 @@ export default function BlogOverview({
                 />
                 <div className="text-sm/6">
                   <p className="font-semibold text-sand">
-                    <a href={post.data.author.href}>
-                      <span className="absolute inset-0" />
+                    <span className="absolute inset-0" />
                       {post.data.author.name}
-                    </a>
                   </p>
                   <p className="text-sand">{post.data.author.role}</p>
                 </div>
