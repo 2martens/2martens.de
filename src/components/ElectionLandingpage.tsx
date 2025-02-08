@@ -47,7 +47,7 @@ export default function ElectionLandingPage(props: any) {
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
               href="https://www.gruene-hamburg.de/gute-gruende-fuer-gruen/"
-              className="text-sm/6 font-semibold text-sand"
+              className="text-sm/6 font-semibold"
             >
               Lese das Wahlprogramm <span aria-hidden="true">→</span>
             </a>

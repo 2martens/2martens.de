@@ -17,15 +17,11 @@
 
 @layer base {
   html {
-    font-family: var(--font-main);
+    @apply font-main;
   }
   body {
     @apply bg-dark-green;
-  }
-}
-
-@layer components {
-  * {
     @apply text-white;
+    @apply text-pretty;
   }
 }

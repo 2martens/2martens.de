@@ -55,7 +55,7 @@ function horizontalRuleConverter() {
 function quoteConverter() {
   return ({ node }: { node: SerializedQuoteNode }) => (
     <figure className="border-l border-indigo-600 pl-8">
-      <blockquote className="text-xl/8 font-semibold tracking-tight text-sand">
+      <blockquote className="text-xl/8 font-semibold tracking-tight">
         {node.children.map((child: SerializedLexicalNode) => (
           <p>"{child.text}"</p>
         ))}

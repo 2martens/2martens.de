@@ -22,7 +22,7 @@ export default function BlogOverview({
           <h2 className="text-4xl font-semibold tracking-tight text-pretty text-yellow sm:text-5xl">
             {title}
           </h2>
-          <p className="mt-2 text-lg/8 text-sand">{description}</p>
+          <p className="mt-2 text-lg/8">{description}</p>
         </div>
         <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {posts.map((post) => (
@@ -33,7 +33,6 @@ export default function BlogOverview({
               <div className="flex items-center gap-x-4 text-xs">
                 <time
                   dateTime={post.data.publishedAt.toString()}
-                  className="text-sand"
                 >
                   {new Date(post.data.publishedAt).toLocaleDateString("de-DE")}
                 </time>
@@ -66,7 +65,7 @@ export default function BlogOverview({
                     </a>
                   )}
                 </h3>
-                <p className="h-auto mt-5 line-clamp-3 text-sm/6 text-sand">
+                <p className="h-auto mt-5 line-clamp-3 text-sm/6">
                   {post.data.description}
                 </p>
               </div>
@@ -79,11 +78,11 @@ export default function BlogOverview({
                   className="size-10 rounded-full bg-gray-50"
                 />
                 <div className="text-sm/6">
-                  <p className="font-semibold text-sand">
+                  <p className="font-semibold">
                     <span className="absolute inset-0" />
                       {post.data.author.name}
                   </p>
-                  <p className="text-sand">{post.data.author.role}</p>
+                  <p>{post.data.author.role}</p>
                 </div>
               </div>
             </article>
