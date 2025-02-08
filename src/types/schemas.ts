@@ -37,9 +37,30 @@ export const AutoLinkNodeSchema = BaseNodeSchema.extend({
   type: z.enum(["autolink", "link"]),
 });
 
-export const ListItemSchema = BaseNodeSchema.extend({
+export const DeepListItemSchema = BaseNodeSchema.extend({
   type: z.literal("listitem"),
   children: z.array(TextNodeSchema).optional(),
+  direction: z.enum(["ltr", "rtl"]).nullable(),
+  format: z.enum(["left", "center", "right", "justify", ""]).optional(),
+  indent: z.number().optional(),
+  checked: z.boolean().optional(),
+  value: z.number().optional(),
+});
+
+export const DeepListSchema = BaseNodeSchema.extend({
+  type: z.literal("list"),
+  children: z.array(DeepListItemSchema).optional(),
+  direction: z.enum(["ltr", "rtl"]).nullable(),
+  format: z.enum(["left", "center", "right", "justify", ""]).optional(),
+  indent: z.number().optional(),
+  listType: z.enum(["number", "check", "bullet"]).optional(),
+  start: z.number().optional(),
+  tag: z.string().optional(),
+});
+
+export const ListItemSchema = BaseNodeSchema.extend({
+  type: z.literal("listitem"),
+  children: z.array(z.union([TextNodeSchema, DeepListSchema])).optional(),
   direction: z.enum(["ltr", "rtl"]).nullable(),
   format: z.enum(["left", "center", "right", "justify", ""]).optional(),
   indent: z.number().optional(),
