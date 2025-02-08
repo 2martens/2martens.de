@@ -5,9 +5,9 @@ import { type CollectionEntry } from "astro:content";
 export default function Post({ post }: { post: CollectionEntry<"posts">|CollectionEntry<"speeches"> }) {
   return (
     <div className="px-6 py-16 lg:px-8">
-      <article className="mx-auto max-w-3xl text-base/7 text-white">
+      <article className="mx-auto max-w-3xl text-base/7">
         {'category' in post.data && post.data.category && (
-          <p className="text-base/7 font-semibold text-white">
+          <p className="text-base/7 font-semibold">
             {post.data.category.title}
           </p>
         )}

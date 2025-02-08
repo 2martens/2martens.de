@@ -25,7 +25,7 @@ export default function Header({
       >
         <div className="flex lg:flex-1">
           <a href={`${base}/`} className="-m-1.5 p-1.5">
-            <span className="text-sm/6 font-semibold text-white">
+            <span className="text-sm/6 font-semibold">
               {logoTitle}
             </span>
           </a>
@@ -34,7 +34,7 @@ export default function Header({
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
           >
             <span className="sr-only">Open main menu</span>
             <FontAwesomeIcon
@@ -49,7 +49,7 @@ export default function Header({
             <a
               key={item.data.name}
               href={base + item.data.link}
-              className="text-sm/6 font-semibold text-white"
+              className="text-sm/6 font-semibold"
             >
               {item.data.name}
             </a>

@@ -23,3 +23,9 @@
     @apply bg-dark-green;
   }
 }
+
+@layer components {
+  * {
+    @apply text-white;
+  }
+}

@@ -34,7 +34,7 @@ export default function HeaderSection({ title, description }: { title: string, d
       </div>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-5xl font-semibold tracking-tight text-white sm:text-7xl">{title}</h2>
+          <h2 className="text-5xl font-semibold tracking-tight sm:text-7xl">{title}</h2>
           <p className="mt-8 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">
             {description}
           </p>
@@ -44,7 +44,7 @@ export default function HeaderSection({ title, description }: { title: string, d
             <div key={card.data.name} className="flex gap-x-4 rounded-xl bg-white/5 p-6 ring-1 ring-white/10 ring-inset">
               <FontAwesomeIcon icon={byPrefixAndName.fas[card.data.icon]} aria-hidden="true" className="h-7 w-5 flex-none text-indigo-400" />
               <div className="text-base/7">
-                <h3 className="font-semibold text-white">{card.data.name}</h3>
+                <h3 className="font-semibold">{card.data.name}</h3>
                 <p className="mt-2 text-gray-300">{card.data.description}</p>
               </div>
             </div>
