@@ -16,12 +16,12 @@ export default function BlogOverview({
   basehref: string;
 }): any {
   return (
-    <div className="py-16 sm:py-24">
+    <main className="py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-4xl font-semibold tracking-tight text-pretty text-yellow sm:text-5xl">
+          <h1 className="text-4xl font-semibold tracking-tight text-pretty text-yellow sm:text-5xl">
             {title}
-          </h2>
+          </h1>
           <p className="mt-2 text-lg/8">{description}</p>
         </div>
         <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
@@ -89,6 +89,6 @@ export default function BlogOverview({
           ))}
         </div>
       </div>
-    </div>
+    </main>
   );
 }

@@ -4,7 +4,7 @@ import { type CollectionEntry } from "astro:content";
 
 export default function Post({ post }: { post: CollectionEntry<"posts">|CollectionEntry<"speeches"> }) {
   return (
-    <div className="px-6 py-16 lg:px-8">
+    <main className="px-6 py-16 lg:px-8">
       <article className="mx-auto max-w-3xl text-base/7">
         {'category' in post.data && post.data.category && (
           <p className="text-base/7 font-semibold">
@@ -17,6 +17,6 @@ export default function Post({ post }: { post: CollectionEntry<"posts">|Collecti
         {renderRichText(post.data.content, "mt-10 text-pretty hyphens-auto text-justify")}
         <p className="mt-6 text-sm">Letztes Update: {toDateAndTimeString(post.data.updatedAt)}</p>
       </article>
-    </div>
+    </main>
   );
 }
