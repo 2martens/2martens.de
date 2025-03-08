@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { claim, heading, intro, positions } from "../data/manifesto";
 
-export default function ElectionLandingPage(props: any) {
+export default function ElectionLandingPage(props: any, showCTA: boolean) {
   return (
     <main>
       <div
@@ -38,11 +38,12 @@ export default function ElectionLandingPage(props: any) {
           </div>
         </div>
       </div>
-      <div className="px-6 py-14 sm:py-22 lg:px-8">
-        <div className="mx-auto max-w-7xl text-center">
-          <h2 className="text-4xl font-semibold tracking-tight text-pretty text-yellow sm:text-5xl">
-            <span className="text-yellow">Überzeugt?</span>
-          </h2>
+      {showCTA && (
+        <div className="px-6 py-14 sm:py-22 lg:px-8">
+          <div className="mx-auto max-w-7xl text-center">
+            <h2 className="text-4xl font-semibold tracking-tight text-pretty text-yellow sm:text-5xl">
+              <span className="text-yellow">Überzeugt?</span>
+            </h2>
           <h3 className="mt-1 text-3xl font-semibold tracking-tight text-pretty sm:text-4xl">Platz 56 der Landesliste der GRÜNEN am 2. März!</h3>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
@@ -54,6 +55,7 @@ export default function ElectionLandingPage(props: any) {
           </div>
         </div>
       </div>
+      )}
     </main>
   );
 }
