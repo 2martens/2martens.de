@@ -13,6 +13,7 @@
   --color-klee: rgb(0, 137, 57);
   --color-sand: rgb(245, 241, 233);
   --color-yellow: rgb(255, 255, 0);
+  --spacing: 0.25rem;
 }
 
 @layer base {
@@ -23,5 +24,9 @@
     @apply bg-dark-green;
     @apply text-white;
     @apply text-pretty;
+  }
+
+  .optimal-reading-width {
+    max-width: 28em;
   }
 }
