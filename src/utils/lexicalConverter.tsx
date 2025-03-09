@@ -172,7 +172,7 @@ const listConverterNested = ({ node }: { node: SerializedListNode }) => {
 const checkListConverter = (node: SerializedListNode, isNested: boolean) => {
   return (
     <ul
-      className={`${!isNested ? "mt-8" : ""} space-y-4 list-none`}
+      className={`${!isNested ? "mt-4 mb-8" : ""} space-y-4 list-none`}
       role="list"
     >
       {node.children
@@ -228,7 +228,7 @@ const checkListConverter = (node: SerializedListNode, isNested: boolean) => {
 const bulletListConverter = (node: SerializedListNode, isNested: boolean) => {
   return (
     <ul
-      className={`${!isNested ? "my-8" : ""} space-y-4 list-none`}
+      className={`${!isNested ? "mt-4 mb-8" : ""} space-y-4 list-none`}
       role="list"
     >
       {node.children
@@ -286,7 +286,7 @@ const bulletListConverter = (node: SerializedListNode, isNested: boolean) => {
 const numberedListConverter = (node: SerializedListNode, isNested: boolean) => {
   return (
     <ol
-      className={`${!isNested ? "mt-8" : ""} space-y-4 list-none`}
+      className={`${!isNested ? "mt-4 mb-8" : ""} space-y-4 list-none`}
       role="list"
     >
       {node.children
