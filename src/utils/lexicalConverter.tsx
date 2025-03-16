@@ -189,13 +189,13 @@ const checkListConverter = (node: SerializedListNode, isNested: boolean) => {
               <FontAwesomeIcon
                 icon={byPrefixAndName.far["square-check"]}
                 aria-hidden="true"
-                className="size-5 text-yellow flex-none pr-1"
+                className="size-5 text-primary dark:text-primary-dark flex-none pr-1"
               />
             )) || (
               <FontAwesomeIcon
                 icon={byPrefixAndName.far["square"]}
                 aria-hidden="true"
-                className="size-5 text-yellow flex-none pr-1"
+                className="size-5 text-primary dark:text-primary-dark flex-none pr-1"
               />
             )}
             {child.children.map(
@@ -247,7 +247,7 @@ const bulletListConverter = (node: SerializedListNode, isNested: boolean) => {
               <FontAwesomeIcon
                 icon={byPrefixAndName.fas["circle-check"]}
                 aria-hidden="true"
-                className="size-5 text-yellow flex-none pr-1"
+                className="size-5 text-primary dark:text-primary-dark flex-none pr-1"
               />
             )}
             {child.children
@@ -299,7 +299,7 @@ const numberedListConverter = (node: SerializedListNode, isNested: boolean) => {
             className="items-center flex flex-row"
             role="listitem"
           >
-            <span className="size-5 text-indigo-600 flex-none">
+            <span className="size-5 text-primary dark:text-primary-dark flex-none">
               {(index + 1).toString() + "."}
             </span>
             {child.children
