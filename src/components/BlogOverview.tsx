@@ -19,7 +19,7 @@ export default function BlogOverview({
     <main className="py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h1 className="text-4xl font-semibold tracking-tight text-pretty text-yellow sm:text-5xl">
+          <h1 className="text-4xl font-semibold tracking-tight text-pretty text-primary dark:text-primary-dark sm:text-5xl">
             {title}
           </h1>
           <p className="mt-2 text-lg/8">{description}</p>
@@ -39,14 +39,14 @@ export default function BlogOverview({
                 {"category" in post.data && post.data.category && (
                   <a
                     href={base + post.data.category.href}
-                    className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
+                    className="relative z-10 rounded-full bg-primary-900 px-3 py-1.5 font-medium text-on-primary hover:bg-primary-800"
                   >
                     {post.data.category.title}
                   </a>
                 )}
               </div>
               <div className="relative group">
-                <h3 className="mt-3 text-lg/6 font-semibold text-yellow group-hover:text-yellow-300">
+                <h3 className="mt-3 text-lg/6 font-semibold text-body dark:text-body-dark group-hover:text-primary dark:group-hover:text-primary-dark">
                   {("category" in post.data && post.data.category && (
                     <a
                       href={`${base}${basehref}/${post.data.category.slug}/${buildPostUrl(post)}`}

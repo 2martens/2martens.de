@@ -14,6 +14,14 @@
   --color-sand: rgb(245, 241, 233);
   --color-yellow: rgb(255, 255, 0);
   --spacing: 0.25rem;
+
+  --color-primary: var(--color-highlight);
+  --color-body: var(--color-white);
+  --color-subtle: var(--color-sand);
+  --color-supporting: var(--color-white);
+
+  --color-background: var(--color-dark-green);
+  --color-background-secondary: var(--color-white)
 }
 
 @layer base {
@@ -21,8 +29,8 @@
     @apply font-main;
   }
   body {
-    @apply bg-dark-green;
-    @apply text-white;
+    @apply bg-background;
+    @apply text-body;
     @apply text-pretty;
   }
 

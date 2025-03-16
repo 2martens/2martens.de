@@ -25,7 +25,7 @@ export default function Header({
       >
         <div className="flex lg:flex-1">
           <a href={`${base}/`} className="-m-1.5 p-1.5">
-            <span className="text-sm/6 font-semibold">
+            <span className="text-sm/6 font-semibold text-primary dark:text-primary-dark">
               {logoTitle}
             </span>
           </a>
@@ -49,7 +49,7 @@ export default function Header({
             <a
               key={item.data.name}
               href={base + item.data.link}
-              className="text-sm/6 font-semibold"
+              className="text-sm/6 font-semibold text-body dark:text-body-dark hover:text-primary-400 dark:hover:text-primary-dark"
             >
               {item.data.name}
             </a>
@@ -63,15 +63,15 @@ export default function Header({
         className="lg:hidden"
       >
         <div className="fixed inset-0 z-10" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
+        <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-background-secondary dark:bg-background-secondary-dark px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
           <div className="flex items-center justify-between">
             <a href={`${base}/`} className="-m-1.5 p-1.5">
-              <span className="text-sm/6 font-semibold text-black">{logoTitle}</span>
+              <span className="text-sm/6 font-semibold text-body-secondary dark:text-body-secondary-dark">{logoTitle}</span>
             </a>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
-              className="-m-2.5 rounded-md p-2.5 text-black"
+              className="-m-2.5 rounded-md p-2.5 text-body-secondary dark:text-body-secondary-dark"
             >
               <span className="sr-only">Close menu</span>
               <FontAwesomeIcon
@@ -88,7 +88,7 @@ export default function Header({
                   <a
                     key={item.data.name}
                     href={base + item.data.link}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-black hover:bg-black/10"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-body-secondary dark:text-body-secondary-dark hover:text-primary dark:hover:text-primary-dark"
                   >
                     {item.data.name}
                   </a>

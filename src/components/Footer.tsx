@@ -12,7 +12,7 @@ export default function FooterWithMenu({
   socialMediaIcons: CollectionEntry<"footerSocialMediaIcons">[];
 }) {
   return (
-    <footer className="bg-white bottom-0 left-0 right-0">
+    <footer className="bg-background-secondary bottom-0 left-0 right-0">
       <div className="mx-auto max-w-7xl overflow-hidden px-6 py-10 sm:py-14 lg:px-8">
         <nav
           aria-label="Footer"
@@ -22,7 +22,7 @@ export default function FooterWithMenu({
             <a
               key={item.data.name}
               href={base + item.data.link}
-              className="text-gray-900 hover:text-gray-700"
+              className="text-body hover:text-subtle"
             >
               {item.data.name}
             </a>
@@ -33,7 +33,7 @@ export default function FooterWithMenu({
             <a
               key={item.data.name}
               href={item.data.link}
-              className="text-gray-900 hover:text-gray-700"
+              className="text-body hover:text-subtle"
             >
               <span className="sr-only">{item.data.name}</span>
               <FontAwesomeIcon
@@ -44,7 +44,7 @@ export default function FooterWithMenu({
             </a>
           ))}
         </div>
-        <p className="mt-10 text-center text-sm/6 text-gray-600">
+        <p className="mt-10 text-center text-sm/6 text-subtle">
           &copy; 2025 Jim Martens. All rights reserved.
         </p>
       </div>
