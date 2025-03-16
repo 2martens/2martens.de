@@ -76,7 +76,7 @@
   --color-subtle: var(--color-gray-400);
   --color-subtle-dark: var(--color-gray-600);
 
-  --color-body-secondary: var(--color-gray-200);
+  --color-body-secondary: var(--color-gray-100);
   --color-body-secondary-dark: var(--color-gray-200);
 
   --color-supporting: var(--color-purple-300);
