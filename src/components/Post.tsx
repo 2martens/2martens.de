@@ -16,7 +16,7 @@ export default function Post({
               {post.data.category.title}
             </p>
           )}
-          <h1 className="mt-2 text-2xl font-semibold tracking-tight text-pretty text-yellow">
+          <h1 className="mt-2 text-2xl font-semibold tracking-tight text-pretty text-primary dark:text-primary-dark">
             {post.data.title}
           </h1>
         </div>
@@ -25,7 +25,7 @@ export default function Post({
           "text-pretty hyphens-auto text-justify optimal-reading-width mx-auto"
         )}
         <div className="optimal-reading-width mx-auto">
-          <p className="mt-6 text-sand text-sm">
+          <p className="mt-6 text-subtle dark:text-subtle-dark text-sm">
             Letztes Update: {toDateAndTimeString(post.data.updatedAt)}
           </p>
         </div>
