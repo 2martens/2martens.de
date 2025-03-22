@@ -12,9 +12,10 @@ interface Props {
 	title: string;
 	author?: string;
 	description?: string;
+	activeItem: string;
 }
 
-const { title, author, description, appName, logoTitle } = Astro.props;
+const { title, author, description, appName, logoTitle, activeItem } = Astro.props;
 
 const headerMenuItems = await getCollection("headerMenuItems");
 headerMenuItems.sort((a, b) => a.data.order - b.data.order)
@@ -41,7 +42,7 @@ footerMenuItems.sort((a, b) => a.data.order - b.data.order)
 		<title>{title}</title>
 	</head>
 	<body class="flex flex-col bg-background text-body dark:bg-background-dark dark:text-body-dark">
-		<div class="flex-none"><Header logoTitle={logoTitle} menuItems={headerMenuItems} client:load /></div>
+		<div class="flex-none"><Header logoTitle={logoTitle} menuItems={headerMenuItems} activeItem={activeItem} client:load /></div>
 		<div class="grow"><slot /></div>
 		<div class="flex-none"><Footer footerMenuItems={footerMenuItems} socialMediaIcons={footerSocialMediaIcons} /></div>
 	</body>

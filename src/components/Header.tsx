@@ -11,9 +11,11 @@ const base = import.meta.env.BASE_URL == "/" ? "" : import.meta.env.BASE_URL;
 export default function Header({
   logoTitle,
   menuItems,
+  activeItem
 }: {
   logoTitle: string;
   menuItems: CollectionEntry<"headerMenuItems">[];
+  activeItem: string;
 }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -49,7 +51,10 @@ export default function Header({
             <a
               key={item.data.name}
               href={base + item.data.link}
-              className="text-sm/6 font-semibold text-body dark:text-body-dark hover:text-primary-400 dark:hover:text-primary-dark"
+              className={
+                "text-sm/6 font-semibold text-body dark:text-body-dark hover:text-primary-400 dark:hover:text-primary-dark" +
+                (item.data.name === activeItem ? " text-primary dark:text-primary-dark" : "")
+              }
             >
               {item.data.name}
             </a>
@@ -88,7 +93,10 @@ export default function Header({
                   <a
                     key={item.data.name}
                     href={base + item.data.link}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-body-secondary dark:text-body-secondary-dark hover:text-primary dark:hover:text-primary-dark"
+                    className={
+                      "-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-body-secondary dark:text-body-secondary-dark hover:text-primary dark:hover:text-primary-dark" +
+                      (item.data.name === activeItem ? " text-primary dark:text-primary-dark" : "")
+                    }
                   >
                     {item.data.name}
                   </a>
