@@ -1,6 +1,6 @@
 import { CMS_BASE_URL } from "../content.config";
 
-export function buildImageSrc(imageUrl: string | null) {
-    if (!imageUrl) return "";
-    return CMS_BASE_URL + imageUrl;
+export function buildImageSrc(filename: string | null) {
+    if (!filename) return "";
+    return CMS_BASE_URL + "/api/media/file/" + filename;
 }

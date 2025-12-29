@@ -72,7 +72,7 @@ export default function BlogOverview({
               <div className="flex relative mt-8 items-center gap-x-4">
                 <img
                   alt={post.data.author.image.alt}
-                  src={buildImageSrc(post.data.author.image.url)}
+                  src={buildImageSrc(post.data.author.image.filename)}
                   width={post.data.author.image.width || 72}
                   height={post.data.author.image.height || 72}
                   className="size-10 rounded-full bg-gray-50"
