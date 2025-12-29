@@ -65,8 +65,23 @@ export interface Post {
     slug: string;
     href: string;
     role: string;
-    imageUrl: string;
+    image: Media;
     updatedAt: Date;
     createdAt: Date;
   }
-  
+
+  export interface Media {
+    id: string;
+    alt: string;
+    updatedAt: Date;
+    createdAt: Date;
+    url: string;
+    thumbnailURL: string;
+    filename: string;
+    mimeType: string;
+    filesize: string;
+    width: number;
+    height: number;
+    focalX: number;
+    focalY: number;
+  }
