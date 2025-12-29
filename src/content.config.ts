@@ -221,7 +221,7 @@ const authors = defineCollection({
     slug: z.string(),
     href: z.string(),
     role: z.string(),
-    imageUrl: z.string(),
+    image: MediaSchema,
     updatedAt: z.coerce.date(),
     createdAt: z.coerce.date(),
   }),
