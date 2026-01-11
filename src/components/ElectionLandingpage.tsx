@@ -1,7 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { claim, heading, intro, positions } from "../data/manifesto";
+import type {ReactNode} from "react";
 
-export default function ElectionLandingPage(props: any, showCTA: boolean) {
+interface Props {
+  portrait: ReactNode;
+  showCTA: boolean;
+}
+
+export default function ElectionLandingPage({portrait, showCTA}: Props) {
   return (
     <main>
       <div
@@ -34,7 +40,7 @@ export default function ElectionLandingPage(props: any, showCTA: boolean) {
                 </dl>
               </div>
             </div>
-            {props.portrait}
+            {portrait}
           </div>
         </div>
       </div>
