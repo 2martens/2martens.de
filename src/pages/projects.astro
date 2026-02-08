@@ -12,11 +12,23 @@ import { projects } from "@data/projects";
   logoTitle="Jim Martens"
   activeItem="Projekte"
 >
-  <ProjectOverview>
-    <figure class="relative border-none h-full overflow-hidden bg-background dark:bg-background-dark rounded-xl shadow-xl lg:-mr-36" slot="image">
-      <Image src={projects[0].image} alt={projects[0].imageAltText} 
-      class="absolute inset-0 h-full w-auto max-w-none object-cover rounded-xl"
-      />
-    </figure>
-  </ProjectOverview>
+  {projects.map((project, index) => (
+    <ProjectOverview project={project}
+                     isLeft={index % 2 === 0}>
+      {index % 2 === 0 && (
+      <figure class="relative border-none h-full overflow-hidden bg-background dark:bg-background-dark rounded-xl shadow-xl lg:-mr-36" slot="image">
+        <Image src={project.image} alt={project.imageAltText}
+               class="absolute inset-0 h-full w-auto max-w-none object-cover rounded-xl"
+        />
+      </figure>
+      )}
+      {index % 2 !== 0 && (
+          <figure class="relative border-none h-full overflow-hidden bg-background dark:bg-background-dark rounded-xl shadow-xl lg:-ml-36" slot="image">
+            <Image src={project.image} alt={project.imageAltText}
+                   class="absolute inset-0 h-full w-auto max-w-none object-cover rounded-xl"
+            />
+          </figure>
+      )}
+    </ProjectOverview>
+  ))}
 </Layout>
