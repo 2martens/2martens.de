@@ -1,15 +1,14 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {type Project} from "@data/projects";
+import type {ReactNode} from "react";
 
-export default function ProjectOverview({
-                                            project,
-                                            isLeft = true,
-                                            image
-                                        }: {
-    project: Project,
-    isLeft: boolean,
-    image: any,
-}): any {
+interface Props {
+    project: Project;
+    isLeft: boolean;
+    image: ReactNode;
+}
+
+export default function ProjectOverview({project, isLeft, image}: Props) {
     return (
         <div className="overflow-hidden py-24 sm:py-32">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
